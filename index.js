@@ -101,3 +101,19 @@ var kidsWithCandies = function (candies, extraCandies) {
 };
 
 console.log(kidsWithCandies(candies, extraCandies));
+
+const accounts = [
+  [1, 5],
+  [7, 3],
+  [3, 5],
+];
+
+var maximumWealth = function (accounts) {
+  let res = [];
+  for (let i = 0; i < accounts.length; i++) {
+    res.push(accounts[i].reduce((a, b) => a + b));
+  }
+  return Math.max(...res);
+};
+
+console.log(maximumWealth(accounts));
