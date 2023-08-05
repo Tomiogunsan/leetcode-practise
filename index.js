@@ -79,3 +79,25 @@ var numIdenticalPairs = function (numb) {
 };
 
 console.log(numIdenticalPairs(numb));
+
+const candies = [2, 3, 5, 1, 3];
+const extraCandies = 3;
+
+var kidsWithCandies = function (candies, extraCandies) {
+  const res = [];
+
+  let high = Math.max(...candies);
+
+  for (let i = 0; i < candies.length; i++) {
+    const output = candies[i] + extraCandies;
+
+    if (output >= high) {
+      res.push(true);
+    } else {
+      res.push(false);
+    }
+  }
+  return res;
+};
+
+console.log(kidsWithCandies(candies, extraCandies));
