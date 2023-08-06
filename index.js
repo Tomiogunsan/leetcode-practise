@@ -117,3 +117,36 @@ var maximumWealth = function (accounts) {
 };
 
 console.log(maximumWealth(accounts));
+
+const numbs = [1, 2, 3, 4];
+var runningSum = function (numbs) {
+  let res = []; let sum = 0
+  for(let i = 0; i<numbs.length; i++){
+    sum += numbs[i]
+    console.log(sum)
+    res.push(sum)
+  }
+  return res
+};
+
+console.log(runningSum(numbs));
+
+ const strs = ['flower', 'flow', 'flight' ]
+var findString = function (strs) {
+    let longestPrefix = "";
+  let res ;
+  if (strs.length === 0) return "";
+ for (let i = 0; i < strs[0].length; i++) {
+      let character = strs[0][i];
+   console.log( character);
+      if (strs.every((item) => item[i] === character)) {
+
+      longestPrefix += character;
+   } else {
+     break;
+   }
+ }
+  return longestPrefix; 
+}
+
+console.log(findString(strs));
