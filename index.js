@@ -120,33 +120,81 @@ console.log(maximumWealth(accounts));
 
 const numbs = [1, 2, 3, 4];
 var runningSum = function (numbs) {
-  let res = []; let sum = 0
-  for(let i = 0; i<numbs.length; i++){
-    sum += numbs[i]
-    console.log(sum)
-    res.push(sum)
+  let res = [];
+  let sum = 0;
+  for (let i = 0; i < numbs.length; i++) {
+    sum += numbs[i];
+    console.log(sum);
+    res.push(sum);
   }
-  return res
+  return res;
 };
 
 console.log(runningSum(numbs));
 
- const strs = ['flower', 'flow', 'flight' ]
+const strs = ["flower", "flow", "flight"];
 var findString = function (strs) {
-    let longestPrefix = "";
-  let res ;
+  let longestPrefix = "";
+  let res;
   if (strs.length === 0) return "";
- for (let i = 0; i < strs[0].length; i++) {
-      let character = strs[0][i];
-   console.log( character);
-      if (strs.every((item) => item[i] === character)) {
-
+  for (let i = 0; i < strs[0].length; i++) {
+    let character = strs[0][i];
+    console.log(character);
+    if (strs.every((item) => item[i] === character)) {
       longestPrefix += character;
-   } else {
-     break;
-   }
- }
-  return longestPrefix; 
-}
+    } else {
+      break;
+    }
+  }
+  return longestPrefix;
+};
 
 console.log(findString(strs));
+
+const sentences = [
+  "alice and bob love leetcode",
+  "i think so too",
+  "this is great thanks very much",
+];
+var mostWordsFound = function (sentences) {
+  const res = sentences.splice(",");
+  console.log(res);
+  let temp = 0;
+  res.forEach((item, i) => {
+    console.log(item.split(" "));
+    if (item.split(" ").length > temp) {
+      temp = item.split(" ").length;
+    }
+  });
+  return temp;
+};
+
+console.log(mostWordsFound(sentences));
+
+const nus = [10, 4, 8, 3];
+var leftRightDifference = function (nus) {
+  const res = [0];
+  const res1 = [0];
+
+  let sum = 0;
+  let sum2 = 0;
+  for (let i = 0; i < nus.length - 1; i++) {
+    sum += nus[i];
+    res.push(sum);
+
+    console.log(res);
+  }
+
+  for (let i = nus.length - 1; i > 0; i--) {
+    sum2 += nus[i];
+    res1.unshift(sum2);
+    console.log(res1);
+  }
+  // sum of two arrays
+  const totalSum = res.map((num, i) => {
+    return Math.abs(num - res1[i]);
+  });
+  console.log(totalSum);
+  return totalSum
+};
+console.log(leftRightDifference(nus));
