@@ -197,4 +197,4 @@ var leftRightDifference = function (nus) {
   console.log(totalSum);
   return totalSum
 };
-console.log(leftRightDifference(nus));
+console.log(leftRightDifference(nus))
