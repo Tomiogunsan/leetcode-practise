@@ -198,3 +198,16 @@ var leftRightDifference = function (nus) {
   return totalSum
 };
 console.log(leftRightDifference(nus))
+
+ const address = "255.100.50.0";
+
+ var defangIPaddr = function (address) {
+// for(let i = 0; i < address.length; i++)
+// console.log(address[i])
+// if (address[i] === ".") {
+//   address.replace(".", "[.]");
+// }
+ const res = address.replaceAll(".", "[.]");
+return res
+ };
+ console.log(defangIPaddr(address));
