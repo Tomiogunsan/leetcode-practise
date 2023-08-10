@@ -195,19 +195,37 @@ var leftRightDifference = function (nus) {
     return Math.abs(num - res1[i]);
   });
   console.log(totalSum);
-  return totalSum
+  return totalSum;
 };
-console.log(leftRightDifference(nus))
+console.log(leftRightDifference(nus));
 
- const address = "255.100.50.0";
+const address = "255.100.50.0";
 
- var defangIPaddr = function (address) {
-// for(let i = 0; i < address.length; i++)
-// console.log(address[i])
-// if (address[i] === ".") {
-//   address.replace(".", "[.]");
-// }
- const res = address.replaceAll(".", "[.]");
-return res
- };
- console.log(defangIPaddr(address));
+var defangIPaddr = function (address) {
+  // for(let i = 0; i < address.length; i++)
+  // console.log(address[i])
+  // if (address[i] === ".") {
+  //   address.replace(".", "[.]");
+  // }
+  const res = address.replaceAll(".", "[.]");
+  return res;
+};
+console.log(defangIPaddr(address));
+
+const jewels = "aA";
+const stones = "aAAbbbb";
+
+var numJewelsInStones = function (jewels, stones) {
+  const jewelSet = new Set(jewels);
+  console.log(jewelSet);
+
+  let count = 0;
+  for (let stone of stones) {
+    if (jewelSet.has(stone)) {
+      count++;
+    }
+  }
+  return count;
+};
+
+console.log(numJewelsInStones(jewels, stones));
