@@ -212,6 +212,7 @@ var defangIPaddr = function (address) {
 };
 console.log(defangIPaddr(address));
 
+// strings problem
 const jewels = "aA";
 const stones = "aAAbbbb";
 
