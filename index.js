@@ -229,3 +229,15 @@ var numJewelsInStones = function (jewels, stones) {
 };
 
 console.log(numJewelsInStones(jewels, stones));
+
+const command = "G()()()()(al)";
+var interpret = function (command) {
+  const res = command.split("()").join("o").split("(al)").join("al");
+
+    
+
+    return res
+}
+ 
+
+console.log(interpret(command))
