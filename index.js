@@ -233,12 +233,32 @@ console.log(numJewelsInStones(jewels, stones));
 
 const command = "G()()()()(al)";
 var interpret = function (command) {
-  const res = command.split("()").join("o").split("(al)").join("al");
+  // const res = command.split("()").join("o").split("(al)").join("al");
 
-    
-
+    const res = command.replaceAll("()", "o")
+const res2 = res.replace("(al)", "al")
+console.log(res2)
     return res
 }
  
 
 console.log(interpret(command))
+
+const s = "RLRRLLRLRL";
+var balancedStringSplit = function (s) {
+let res = 0;
+ let ans = 0;
+ for (let i = 0; i < s.length; i++) {
+   if(s.charAt(i) == "L"){
+    ans++
+   } else{
+    ans--
+   }
+   if(ans == 0){
+res++
+   }
+ }
+return res;
+};
+
+console.log(balancedStringSplit(s));
