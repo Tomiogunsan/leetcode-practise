@@ -279,3 +279,18 @@ return ans.join("")
 };
 
 console.log(restoreString(sa, indices));
+
+const word1 = ["ab", "c"];
+const word2 = ["a", "bc"];
+var arrayStringsAreEqual = function (word1, word2) {
+ let res1 = word1.join("")
+ console.log(res1)
+ let res2 = word2.join("")
+console.log(res2)
+if(res1 === res2){
+  return true
+}
+return false
+};
+
+console.log(arrayStringsAreEqual(word1, word2));
