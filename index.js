@@ -235,30 +235,29 @@ const command = "G()()()()(al)";
 var interpret = function (command) {
   // const res = command.split("()").join("o").split("(al)").join("al");
 
-    const res = command.replaceAll("()", "o")
-const res2 = res.replace("(al)", "al")
-console.log(res2)
-    return res
-}
- 
+  const res = command.replaceAll("()", "o");
+  const res2 = res.replace("(al)", "al");
+  console.log(res2);
+  return res;
+};
 
-console.log(interpret(command))
+console.log(interpret(command));
 
 const s = "RLRRLLRLRL";
 var balancedStringSplit = function (s) {
-let res = 0;
- let ans = 0;
- for (let i = 0; i < s.length; i++) {
-   if(s.charAt(i) == "L"){
-    ans++
-   } else{
-    ans--
-   }
-   if(ans == 0){
-res++
-   }
- }
-return res;
+  let res = 0;
+  let ans = 0;
+  for (let i = 0; i < s.length; i++) {
+    if (s.charAt(i) == "L") {
+      ans++;
+    } else {
+      ans--;
+    }
+    if (ans == 0) {
+      res++;
+    }
+  }
+  return res;
 };
 
 console.log(balancedStringSplit(s));
@@ -266,16 +265,15 @@ console.log(balancedStringSplit(s));
 const sa = "codeleet";
 const indices = [4, 5, 6, 7, 0, 2, 1, 3];
 var restoreString = function (sa, indices) {
+  const ans = new Array(indices.length);
 
-  const ans = new Array(indices.length)
-
-console.log(ans)
-for(let i = 0; i < indices.length; i++){
-  ans[indices[i]] = sa[i]
-  console.log(sa[i])
-  console.log(ans[indices[i]])
-}
-return ans.join("")
+  console.log(ans);
+  for (let i = 0; i < indices.length; i++) {
+    ans[indices[i]] = sa[i];
+    console.log(sa[i]);
+    console.log(ans[indices[i]]);
+  }
+  return ans.join("");
 };
 
 console.log(restoreString(sa, indices));
@@ -283,14 +281,14 @@ console.log(restoreString(sa, indices));
 const word1 = ["ab", "c"];
 const word2 = ["a", "bc"];
 var arrayStringsAreEqual = function (word1, word2) {
- let res1 = word1.join("")
- console.log(res1)
- let res2 = word2.join("")
-console.log(res2)
-if(res1 === res2){
-  return true
-}
-return false
+  let res1 = word1.join("");
+
+  let res2 = word2.join("");
+
+  if (res1 === res2) {
+    return true;
+  }
+  return false;
 };
 
 console.log(arrayStringsAreEqual(word1, word2));
