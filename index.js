@@ -281,7 +281,7 @@ console.log(restoreString(sa, indices));
 const word1 = ["ab", "c"];
 const word2 = ["a", "bc"];
 var arrayStringsAreEqual = function (word1, word2) {
-  let res1 = word1.join("");
+  let res1 = word1.join(" ");
 
   let res2 = word2.join("");
 
