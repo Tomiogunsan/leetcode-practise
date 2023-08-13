@@ -283,7 +283,7 @@ const word2 = ["a", "bc"];
 var arrayStringsAreEqual = function (word1, word2) {
   let res1 = word1.join(" ");
 
-  let res2 = word2.join("");
+  let res2 = word2.join(" ");
 
   if (res1 === res2) {
     return true;
