@@ -328,9 +328,7 @@ var sortSentence = function(sen) {
     for(let i = 0; i < word.length; i++){
      if(!isNaN(word[i])){
      newS[word[i]] = word.slice(0, i);
-    console.log(newS[word[i]]);
-      
-      console.log(newS);
+    
      }
     }
   })
