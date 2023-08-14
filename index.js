@@ -318,3 +318,23 @@ return res
 };
 
 console.log(truncateSentence(text,k))
+
+const sen = "is2 sentence4 This1 a3";
+var sortSentence = function(sen) {
+  const newS = []
+ 
+ let res = sen.split(" ")
+  res.forEach((word) => {
+    for(let i = 0; i < word.length; i++){
+     if(!isNaN(word[i])){
+     newS[word[i]] = word.slice(0, i);
+    console.log(newS[word[i]]);
+      
+      console.log(newS);
+     }
+    }
+  })
+  return newS
+}
+
+console.log(sortSentence(sen));
