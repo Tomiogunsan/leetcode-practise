@@ -302,7 +302,7 @@ const items = [
   const ruleValue = "silver";
 var countMatches = function (items, ruleKey, ruleValue) {
  let ruleKeys = ["type", "color", "name"];
- console.log(ruleKeys.indexOf(ruleKey))
+
  return items.filter((item) => item[ruleKeys.indexOf(ruleKey)] === ruleValue).length
   
 };
