@@ -314,7 +314,7 @@ const k = 5
 var truncateSentence = function (text, k) {
  const res = text.split(" ").slice(0, k).join(" " );
  console.log(res)
-
+return res
 };
 
 console.log(truncateSentence(text,k))
