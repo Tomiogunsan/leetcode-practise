@@ -292,3 +292,19 @@ var arrayStringsAreEqual = function (word1, word2) {
 };
 
 console.log(arrayStringsAreEqual(word1, word2));
+
+const items = [
+    ["phone", "blue", "pixel"],
+    ["computer", "silver", "lenovo"],
+    ["phone", "gold", "iphone"],
+  ]
+   const ruleKey = "color"
+  const ruleValue = "silver";
+var countMatches = function (items, ruleKey, ruleValue) {
+ let ruleKeys = ["type", "color", "name"];
+ console.log(ruleKeys.indexOf(ruleKey))
+ return items.filter((item) => item[ruleKeys.indexOf(ruleKey)] === ruleValue).length
+  
+};
+
+console.log(countMatches(items, ruleKey, ruleValue));
