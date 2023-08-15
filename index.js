@@ -294,46 +294,45 @@ var arrayStringsAreEqual = function (word1, word2) {
 console.log(arrayStringsAreEqual(word1, word2));
 
 const items = [
-    ["phone", "blue", "pixel"],
-    ["computer", "silver", "lenovo"],
-    ["phone", "gold", "iphone"],
-  ]
-   const ruleKey = "color"
-  const ruleValue = "silver";
+  ["phone", "blue", "pixel"],
+  ["computer", "silver", "lenovo"],
+  ["phone", "gold", "iphone"],
+];
+const ruleKey = "color";
+const ruleValue = "silver";
 var countMatches = function (items, ruleKey, ruleValue) {
- let ruleKeys = ["type", "color", "name"];
+  let ruleKeys = ["type", "color", "name"];
 
- return items.filter((item) => item[ruleKeys.indexOf(ruleKey)] === ruleValue).length
-  
+  return items.filter((item) => item[ruleKeys.indexOf(ruleKey)] === ruleValue)
+    .length;
 };
 
 console.log(countMatches(items, ruleKey, ruleValue));
 
 const text = "chopper is not a tanuki";
-const k = 5
+const k = 5;
 var truncateSentence = function (text, k) {
- const res = text.split(" ").slice(0, k).join(" " );
- 
-return res
+  const res = text.split(" ").slice(0, k).join(" ");
+
+  return res;
 };
 
-console.log(truncateSentence(text,k))
+console.log(truncateSentence(text, k));
 
 const sen = "is2 sentence4 This1 a3";
-var sortSentence = function(sen) {
-  const newS = []
- 
- let res = sen.split(" ")
+var sortSentence = function (sen) {
+  const newS = [];
+
+  let res = sen.split(" ");
   res.forEach((word) => {
-    for(let i = 0; i < word.length; i++){
-     if(!isNaN(word[i])){
-     newS[word[i]] = word.slice(0, i);
-    
-     }
+    for (let i = 0; i < word.length; i++) {
+      if (!isNaN(word[i])) {
+        newS[word[i]] = word.slice(0, i);
+      }
     }
-  })
-  return newS
-}
+  });
+  return newS;
+};
 
 console.log(sortSentence(sen));
 
@@ -343,4 +342,18 @@ var toLowerCase = function (sene) {
   return res;
 };
 
-console.log(toLowerCase(se));
+console.log(toLowerCase(sene));
+
+const sent = "Let's take LeetCode contest";
+var reverseWords = function (sent) {
+  let s
+  const res = sent.split(" ");
+  console.log(res);
+  s =  res.map((word) => 
+    word.split("").reverse().join(" ")
+   
+  );
+  return s.join(" ")
+};
+
+console.log(reverseWords(sent));
