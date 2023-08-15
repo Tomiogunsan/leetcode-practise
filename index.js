@@ -336,3 +336,11 @@ var sortSentence = function(sen) {
 }
 
 console.log(sortSentence(sen));
+
+const sene = "Hello";
+var toLowerCase = function (sene) {
+  const res = s.toLowerCase();
+  return res;
+};
+
+console.log(toLowerCase(se));
