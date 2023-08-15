@@ -348,7 +348,7 @@ const sent = "Let's take LeetCode contest";
 var reverseWords = function (sent) {
   let s
   const res = sent.split(" ");
-  console.log(res);
+ 
   s =  res.map((word) => 
     word.split("").reverse().join(" ")
    
