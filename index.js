@@ -346,14 +346,29 @@ console.log(toLowerCase(sene));
 
 const sent = "Let's take LeetCode contest";
 var reverseWords = function (sent) {
-  let s
+  let s;
   const res = sent.split(" ");
- 
-  s =  res.map((word) => 
-    word.split("").reverse().join(" ")
-   
-  );
-  return s.join(" ")
+
+  s = res.map((word) => word.split("").reverse().join(" "));
+  return s.join(" ");
 };
 
 console.log(reverseWords(sent));
+
+const word3 = "abcd";
+const word4 = "pq";
+
+var mergeAlternately = function (word3, word4) {
+  var maxLength = Math.max(word3.length, word4.length);
+  var chars = [];
+  for (var i = 0; i < maxLength; i++) {
+    if (word3[i]) {
+      chars.push(word3[i]);
+    }
+
+    if (word4[i]) chars.push(word4[i]);
+  }
+  return chars.join("");
+};
+
+console.log(mergeAlternately(word3, word4));
