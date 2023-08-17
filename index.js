@@ -188,13 +188,13 @@ var leftRightDifference = function (nus) {
   for (let i = nus.length - 1; i > 0; i--) {
     sum2 += nus[i];
     res1.unshift(sum2);
-    console.log(res1);
+    
   }
   // sum of two arrays
   const totalSum = res.map((num, i) => {
     return Math.abs(num - res1[i]);
   });
-  console.log(totalSum);
+  
   return totalSum;
 };
 console.log(leftRightDifference(nus));
