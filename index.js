@@ -270,8 +270,7 @@ var restoreString = function (sa, indices) {
   console.log(ans);
   for (let i = 0; i < indices.length; i++) {
     ans[indices[i]] = sa[i];
-    console.log(sa[i]);
-    console.log(ans[indices[i]]);
+   
   }
   return ans.join("");
 };
