@@ -267,7 +267,7 @@ const indices = [4, 5, 6, 7, 0, 2, 1, 3];
 var restoreString = function (sa, indices) {
   const ans = new Array(indices.length);
 
-  console.log(ans);
+  
   for (let i = 0; i < indices.length; i++) {
     ans[indices[i]] = sa[i];
    
