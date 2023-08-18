@@ -188,13 +188,12 @@ var leftRightDifference = function (nus) {
   for (let i = nus.length - 1; i > 0; i--) {
     sum2 += nus[i];
     res1.unshift(sum2);
-    
   }
   // sum of two arrays
   const totalSum = res.map((num, i) => {
     return Math.abs(num - res1[i]);
   });
-  
+
   return totalSum;
 };
 console.log(leftRightDifference(nus));
@@ -218,7 +217,6 @@ const stones = "aAAbbbb";
 
 var numJewelsInStones = function (jewels, stones) {
   const jewelSet = new Set(jewels);
- 
 
   let count = 0;
   for (let stone of stones) {
@@ -237,7 +235,7 @@ var interpret = function (command) {
 
   const res = command.replaceAll("()", "o");
   const res2 = res.replace("(al)", "al");
- 
+
   return res;
 };
 
@@ -369,3 +367,23 @@ var mergeAlternately = function (word3, word4) {
 };
 
 console.log(mergeAlternately(word3, word4));
+
+const numsa = [8, 1, 2, 2, 3];
+var smallerNumbersThanCurrent = function (numsa) {
+ let res = []
+ 
+ for(let i = 0; i<numsa.length; i++){
+  let j = 0,
+    count = 0;
+  while(j< numsa.length){
+    if(nums[j] < nums[i]){
+      count++;
+    }
+    j++;
+  }
+  res.push(count)
+ }
+ return res
+};
+
+console.log(smallerNumbersThanCurrent(numsa));
