@@ -24,22 +24,37 @@ function validAnagram(first, second) {
 validAnagram("qwerty", "qeywrt");
 const num1 = "22";
 const num2 = "222";
-function sameFrequency(num1, num2){
-if(num1.length !== num2.length)return false
-const lookup = {}
-for(let i of num1){
-    lookup[i] = lookup[i] + 1 || 1
-}
-for(let j of num2){
-    if(!lookup[j]){
-        return false
-    }else{
-        lookup[j] -= 1
+function sameFrequency(num1, num2) {
+  if (num1.length !== num2.length) return false;
+  const lookup = {};
+  for (let i of num1) {
+    lookup[i] = lookup[i] + 1 || 1;
+  }
+  for (let j of num2) {
+    if (!lookup[j]) {
+      return false;
+    } else {
+      lookup[j] -= 1;
     }
-return true
+    return true;
+  }
 }
+console.log(sameFrequency(num1, num2));
+
+const dupli = [1, 2, 2];
+function areThereDuplicates(dupli) {
+  const lookup = {};
+  for (let i of dupli) {
+    lookup[i] = lookup[i] + 1 || 1;
+    console.log(lookup)
+  }
+  for(let keys in lookup){
+   if(lookup[keys] > 1)return true
+    
+  }
+  return false
 }
-console.log(sameFrequency(num1, num2))
+console.log(areThereDuplicates(dupli));
 
 // multiple pointers pattern
 function sumZero(arr) {
@@ -73,17 +88,17 @@ function countUniqueValues(arr) {
 }
 
 // sliding window
-function maxSubarraySum(arr, num){
-    let maxSum = 0;
-    let tempSum = 0;
-    if(arr.length < num) return null;
-    for(let i = 0; i < num; i++){
-        maxSum += arr[i];
-    }
-    tempSum = maxSum
-    for(let i = num ; i < arr.length; i++){
-        tempSum = tempSum - arr[i - num] + arr[i];
-        maxSum = Math. max(maxSum, tempSum);
-    }
-    return maxSum;
+function maxSubarraySum(arr, num) {
+  let maxSum = 0;
+  let tempSum = 0;
+  if (arr.length < num) return null;
+  for (let i = 0; i < num; i++) {
+    maxSum += arr[i];
+  }
+  tempSum = maxSum;
+  for (let i = num; i < arr.length; i++) {
+    tempSum = tempSum - arr[i - num] + arr[i];
+    maxSum = Math.max(maxSum, tempSum);
+  }
+  return maxSum;
 }
