@@ -100,6 +100,23 @@ function averagePair(avg, n) {
   return false;
 }
 console.log(averagePair(avg, n));
+const str1 = "abc",
+  str2 = "abracadabra";
+function isSubsequence(str1, str2) {
+let j = 0, i = 0
+while(i< str1.length){
+    if(j===str2.length){
+        return false
+    }
+    if(str1[i] === str2[j]){
+        i++
+    }
+    j++
+}
+return true
+
+}
+console.log(isSubsequence(str1, str2));
 
 // sliding window
 function maxSubarraySum(arr, num) {
