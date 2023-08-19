@@ -46,13 +46,12 @@ function areThereDuplicates(dupli) {
   const lookup = {};
   for (let i of dupli) {
     lookup[i] = lookup[i] + 1 || 1;
-    console.log(lookup)
+    console.log(lookup);
   }
-  for(let keys in lookup){
-   if(lookup[keys] > 1)return true
-    
+  for (let keys in lookup) {
+    if (lookup[keys] > 1) return true;
   }
-  return false
+  return false;
 }
 console.log(areThereDuplicates(dupli));
 
@@ -86,6 +85,21 @@ function countUniqueValues(arr) {
   }
   return i + 1;
 }
+
+const avg = [-1, 0, 3, 4, 5, 6],
+  n = 4.1;
+function averagePair(avg, n) {
+  let i = 0;
+  for (let j = 1; j < avg.length; j++) {
+    let average = (avg[i] + avg[j]) / 2;
+    if (average === n) {
+      return true;
+    }
+    i++;
+  }
+  return false;
+}
+console.log(averagePair(avg, n));
 
 // sliding window
 function maxSubarraySum(arr, num) {
