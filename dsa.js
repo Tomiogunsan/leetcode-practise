@@ -22,6 +22,24 @@ function validAnagram(first, second) {
 }
 
 validAnagram("qwerty", "qeywrt");
+const num1 = "22";
+const num2 = "222";
+function sameFrequency(num1, num2){
+if(num1.length !== num2.length)return false
+const lookup = {}
+for(let i of num1){
+    lookup[i] = lookup[i] + 1 || 1
+}
+for(let j of num2){
+    if(!lookup[j]){
+        return false
+    }else{
+        lookup[j] -= 1
+    }
+return true
+}
+}
+console.log(sameFrequency(num1, num2))
 
 // multiple pointers pattern
 function sumZero(arr) {
