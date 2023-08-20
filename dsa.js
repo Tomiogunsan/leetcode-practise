@@ -99,7 +99,7 @@ function averagePair(avg, n) {
   }
   return false;
 }
-console.log(averagePair(avg, n));
+
 const str1 = "abc",
   str2 = "abracadabra";
 function isSubsequence(str1, str2) {
