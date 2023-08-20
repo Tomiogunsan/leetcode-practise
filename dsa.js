@@ -53,7 +53,7 @@ function areThereDuplicates(dupli) {
   }
   return false;
 }
-console.log(areThereDuplicates(dupli));
+
 
 // multiple pointers pattern
 function sumZero(arr) {
