@@ -116,7 +116,7 @@ while(i< str1.length){
 return true
 
 }
-console.log(isSubsequence(str1, str2));
+
 
 // sliding window
 function maxSubarraySum(arr, num) {
