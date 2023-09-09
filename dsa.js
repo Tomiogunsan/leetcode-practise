@@ -161,5 +161,3 @@ this.newarr.length = ns
     return result
   }
 }
-console.log (OrderedStream.prototype.insert())
-console.log( new OrderedStream(ns))
