@@ -133,3 +133,33 @@ function maxSubarraySum(arr, num) {
   }
   return maxSum;
 }
+
+
+const ns = 5
+let value = [
+  [5],
+  [3, "ccccc"],
+  [1, "aaaaa"],
+  [2, "bbbbb"],
+  [5, "eeeee"],
+  [4, "ddddd"],
+];
+class OrderedStream{
+  constructor(ns){
+this.pointer = 0
+this.newarr = []
+this.newarr.length = ns
+  }
+  insert(idkey, value){
+    let result = []
+    this.newarr[idkey -1] = value
+    while(this.newarr[this.pointer]){
+      result.push(this.newarr[this.pointer])
+      this.pointer++
+      console.log(result);
+    }
+    return result
+  }
+}
+console.log (OrderedStream.prototype.insert())
+console.log( new OrderedStream(ns))
