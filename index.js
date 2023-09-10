@@ -208,7 +208,7 @@ var defangIPaddr = function (address) {
 console.log(defangIPaddr(address));
 
 // strings problem
-const jewels = "ab";
+const jewels = "aa";
 const stones = "aAAbbbb";
 
 var numJewelsInStones = function (jewels, stones) {
