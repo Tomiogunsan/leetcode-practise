@@ -65,3 +65,27 @@ var uniqueMorseRepresentations = function (wordes) {
 };
 
 console.log(uniqueMorseRepresentations(wordes));
+
+
+const key = "the quick brown fox jumps over the lazy dog";
+const message = "vkbs bs t suepuv";
+
+var decodeMessage = function (key, message) {
+  let res = ''
+  key = Array.from(new Set(key.split(' ').join('')));
+  console.log(key)
+  const hash = new Map()
+  console.log(hash)
+  const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+
+  for(let i = 0; i< alphabet.length; i++){
+    hash.set(key[i], alphabet[i])
+  }
+  for(let chr of message){
+    res += hash.get(chr) || ''
+    console.log(res)
+  }
+  return res
+};
+
+console.log(decodeMessage(key, message));
