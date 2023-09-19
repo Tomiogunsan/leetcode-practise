@@ -54,14 +54,11 @@ var uniqueMorseRepresentations = function (wordes) {
   };
 
   for (let i = 0; i < wordes.length; i++) {
-    
     let morseWord = "";
     const word = wordes[i];
     for (let j = 0; j < word.length; j++) {
-      console.log(word[j]);
       const letter = word[j];
       morseWord += morseCode[letter];
-     
     }
     return new Set(morseWord).size;
   }
