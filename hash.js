@@ -81,7 +81,7 @@ var decodeMessage = function (key, message) {
     hash.set(key[i], alphabet[i]);
   }
   for (let chr of message) {
-    res += hash.get(chr) || "";
+    res += hash.get(chr) || " ";
   }
   return res;
 };
