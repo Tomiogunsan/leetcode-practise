@@ -1,3 +1,5 @@
+const { count } = require("console");
+
 const names = ["Mary", "John", "Emma"];
 const heights = [180, 165, 170];
 var sortPeople = function (names, heights) {
@@ -127,3 +129,23 @@ return count
 };
 
 console.log(romanToInt(s))
+
+const nums = [0, 1, 4, 6, 7, 10];
+const diff = 3;
+
+var arithmeticTriplets = function(nums, diff) {
+  let count = 0
+  let hash = new Map()
+  console.log(hash)
+  for(let i = 0; i < nums.length; i++){
+    let temp = nums[i] - diff
+    console.log(temp)
+    console.log(temp - diff)
+    if(hash.has(temp) && hash.has(temp - diff)){
+      count++
+    }
+    console.log(hash.set(nums[i]))
+  }
+}
+
+console.log(arithmeticTriplets(nums, diff));
