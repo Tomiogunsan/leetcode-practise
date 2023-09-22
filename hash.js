@@ -134,18 +134,16 @@ const nums = [0, 1, 4, 6, 7, 10];
 const diff = 3;
 
 var arithmeticTriplets = function(nums, diff) {
+  
   let count = 0
-  let hash = new Map()
-  console.log(hash)
-  for(let i = 0; i < nums.length; i++){
-    let temp = nums[i] - diff
-    console.log(temp)
-    console.log(temp - diff)
-    if(hash.has(temp) && hash.has(temp - diff)){
-      count++
+    for(let num of nums){
+        if(nums.includes(num + diff) && nums.includes(num + diff*2)){
+            count++
+        }
     }
-    console.log(hash.set(nums[i]))
+    return count;
+  
   }
-}
+
 
 console.log(arithmeticTriplets(nums, diff));
