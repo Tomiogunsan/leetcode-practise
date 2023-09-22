@@ -87,3 +87,43 @@ var decodeMessage = function (key, message) {
 };
 
 console.log(decodeMessage(key, message));
+
+const dolphins = (96 + 108 + 89)/3
+console.log(dolphins)
+const koalas = (88 + 91 + 110)/3
+console.log(koalas)
+if(dolphins > koalas){
+  console.log("Dolphins win the trophy")
+}else if (koalas > dolphins) {
+  console.log("Koalas win the trophy");
+} else if (dolphins === koalas) {
+  console.log("Both win the trophy");
+}
+
+const s = "LVIII";
+var romanToInt = function (s) {
+  const roman = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000,
+  }
+let count = 0;
+for(let i = 0; i<s.length; i++){
+  let curr = roman[s[i]]
+  let next = roman[s[i + 1]]
+  if(next > curr){
+    count += next - curr
+    i++
+  }else {
+    count += curr
+  }
+}
+return count
+
+};
+
+console.log(romanToInt(s))
