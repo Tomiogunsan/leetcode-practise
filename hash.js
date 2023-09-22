@@ -6,7 +6,7 @@ var sortPeople = function (names, heights) {
   return obj.map((name) => name.name);
 };
 
-console.log(sortPeople(names, heights));
+
 
 const words = ["cd", "ac", "dc", "ca", "zz"];
 
