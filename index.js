@@ -182,7 +182,7 @@ var leftRightDifference = function (nus) {
     sum += nus[i];
     res.push(sum);
 
-    console.log(res);
+    
   }
 
   for (let i = nus.length - 1; i > 0; i--) {
