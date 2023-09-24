@@ -169,6 +169,7 @@ var cellsInRange = function (se) {
       element += (String.fromCharCode(i))
       console.log(element)
       element += (String.fromCharCode(j))
+      console.log(element)
       answer.push(element);
     }
   }
