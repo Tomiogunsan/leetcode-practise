@@ -163,6 +163,16 @@ var cellsInRange = function (se) {
     rows.push(parts[i][1].charCodeAt(0))
     console.log(rows)
   }
+  for(let i = Math.min(...cols); i<=Math.max(...cols); i++){
+    for(let j = Math.min(...rows); j<=Math.max(...rows); j++){
+      let element = '';
+      element += (String.fromCharCode(i))
+      console.log(element)
+      element += (String.fromCharCode(j))
+      answer.push(element);
+    }
+  }
+  return answer
 };
 
 console.log(cellsInRange(se));
