@@ -149,6 +149,20 @@ var arithmeticTriplets = function(nums, diff) {
 console.log(arithmeticTriplets(nums, diff));
 
 const se = "K1:L2";
-var cellsInRange = function (se) {};
+var cellsInRange = function (se) {
+  let parts = se.split(":")
+  console.log(parts)
+  let cols = []
+  let rows = [];
+  let answer = []
+
+  for(let i = 0; i<parts.length;i++){
+    console.log(parts[i][1])
+    cols.push(parts[i][0].charCodeAt(0))
+    console.log(cols)
+    rows.push(parts[i][1].charCodeAt(0))
+    console.log(rows)
+  }
+};
 
 console.log(cellsInRange(se));
