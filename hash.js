@@ -147,3 +147,8 @@ var arithmeticTriplets = function(nums, diff) {
 
 
 console.log(arithmeticTriplets(nums, diff));
+
+const se = "K1:L2";
+var cellsInRange = function (se) {};
+
+console.log(cellsInRange(se));
