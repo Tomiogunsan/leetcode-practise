@@ -191,7 +191,7 @@ for(let i = 0; i < word.length; i++){
 wro.split("").every(l => re.has(l)) ? ++count : count; 
   
 }
-
+return count
  
 };
 
