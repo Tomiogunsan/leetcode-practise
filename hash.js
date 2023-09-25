@@ -183,7 +183,7 @@ const word = ["ad", "bd", "aaab", "baa", "badab"];
 var countConsistentStrings = function (allowed, word) {
   let count = 0;
   const re = new Set(allowed)
-console.log(re)
+
 for(let i = 0; i < word.length; i++){
   const wro = word[i]
   
