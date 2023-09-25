@@ -186,12 +186,10 @@ var countConsistentStrings = function (allowed, word) {
 console.log(re)
 for(let i = 0; i < word.length; i++){
   const wro = word[i]
-  console.log(wro)
-  console.log(wro.split(''))
- console.log(wro.split("").every(l => re.has(l)) ? ++count : count); 
-  // for(let j = 0; j< wro.length; j++){
-  //   wro[j].every()
-  // }
+  
+  
+wro.split("").every(l => re.has(l)) ? ++count : count; 
+  
 }
 
  
