@@ -23,22 +23,19 @@ const grid = [
 ];
 var countNegatives = function (grid) {
   let count = 0;
-   const res = grid.map((item) => item.sort((a,b) => a - b))
-   console.log(res)
-  res.map((val) => {
-    console.log(val)
-    val.map((element) => {
-        console.log(element)
-        if(element <= -1){
-            console.log(element)
-            count++
-            console.log(count)
-        }
-    })
-  })
-  console.log(count)
+  const res = grid.map((item) => item.sort((a, b) => a - b));
 
-return count
+  res.map((val) => {
+    val.map((element) => {
+      console.log(element);
+      if (element <= -1) {
+        console.log(element);
+        count++;
+      }
+    });
+  });
+
+  return count;
 };
 
 console.log(countNegatives(grid));
