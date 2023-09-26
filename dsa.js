@@ -195,3 +195,20 @@ function naiveSearch(long, short){
 }
 
 naiveSearch("lorie loled", "lol")
+
+// bubble sort
+function bubbleSort(arr){
+  for(var i = arr.length; i > 0; i--){
+    for(var j = 0; j < i - 1; j++){
+      console.log(arr, arr[j]);
+      if(arr[j] > arr[j + 1]){
+        var temp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = temp
+      }
+    }
+  }
+  return arr
+}
+
+console.log(bubbleSort([15,34,10,18,50]))
