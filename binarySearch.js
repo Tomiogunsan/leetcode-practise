@@ -39,3 +39,46 @@ var countNegatives = function (grid) {
 };
 
 console.log(countNegatives(grid));
+
+const mat = 
+[[1,1,0,0,0],
+ [1,1,1,1,0],
+ [1,0,0,0,0],
+ [1,1,0,0,0],
+ [1,1,1,1,1]];
+
+ const k = 3
+
+ var kWeakestRows = function (mat, k) {
+  let result = []
+  
+ for(let i = 0; i < mat.length; i++){
+  let count = 0;
+ 
+ for(let j = 0; j < mat[i].length; j++){
+  if(mat[i][j] === 1){
+    count++
+    
+  }
+ }
+ result.push(count);
+ console.log(result)
+
+ }
+ const itemToSort = result.map((value, index) => ({ value, index }));
+console.log(itemToSort)
+return itemToSort.sort((a,b) => (a.value - b.value)).map((item) => item.index).slice(0,k)
+
+ 
+ };
+
+ console.log(kWeakestRows(mat, k));
+
+
+
+
+
+
+
+
+
