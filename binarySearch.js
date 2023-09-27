@@ -69,6 +69,6 @@ var kWeakestRows = function (mat, k) {
     .sort((a, b) => a.value - b.value)
     .map((item) => item.index)
     .slice(0, k);
-};
+ };
 
 console.log(kWeakestRows(mat, k));
