@@ -72,3 +72,18 @@ var kWeakestRows = function (mat, k) {
  };
 
 console.log(kWeakestRows(mat, k));
+
+const haystack = "leetcode"; 
+const needle = "leeto";
+
+function searchNeedle(haystack, needle){
+const index = haystack.indexOf(needle);
+if(index === -1){
+  return -1
+}else{
+  return index
+}
+
+}
+
+console.log(searchNeedle(haystack, needle))
