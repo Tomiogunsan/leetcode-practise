@@ -1,4 +1,4 @@
-const nums = [1, 2, 5, 2, 3];
+ const nums = [1, 2, 5, 2, 3];
 const target = 2;
 
 var targetIndices = function (nums, target) {
@@ -85,3 +85,30 @@ else return index
 }
 
 console.log(searchNeedle(haystack, needle))
+
+const bum = [4, 5, 2, 1];
+ const queries = [3, 10, 21];
+
+ var answerQueries = function (bum, queries) {
+  const arr = [];
+  let sum = 0;
+  let check = 0;
+  bum.sort((a, b) => a - b);
+  for (let i = 0; i < queries.length; i++) {
+    sum = 0;
+    check = 0;
+    for (let j = 0; j < bum.length; j++) {
+      sum += bum[j];
+      console.log(sum)
+      if (sum <= queries[i]) check += 1;
+      
+      else break;
+    }
+    console.log(check);
+    arr.push(check);
+  }
+  return arr;
+
+ };
+
+ console.log(answerQueries(bum, queries));
