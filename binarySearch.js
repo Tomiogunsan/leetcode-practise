@@ -78,11 +78,9 @@ const needle = "leeto";
 
 function searchNeedle(haystack, needle){
 const index = haystack.indexOf(needle);
-if(index === -1){
-  return -1
-}else{
-  return index
-}
+if(index === -1)return -1
+else return index
+
 
 }
 
