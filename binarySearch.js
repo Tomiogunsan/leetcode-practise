@@ -129,3 +129,17 @@ var intersection = function (nums1, nums2) {
 };
 
 console.log(intersection(nums1, nums2));
+
+const a = [5, 20, 66, 1314];
+var maximumCount = function (a) {
+let count1 = 0
+let count2 = 0
+for(let i = 0; i< a.length; i++){
+  if(a[i] < 0 ) count1++
+  if(a[i] > 0) count2++
+}
+console.log(count1,count2)
+return Math.max(count1, count2);
+};
+
+console.log(maximumCount(a));
