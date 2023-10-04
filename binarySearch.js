@@ -1,4 +1,4 @@
- const nums = [1, 2, 5, 2, 3];
+const nums = [1, 2, 5, 2, 3];
 const target = 2;
 
 var targetIndices = function (nums, target) {
@@ -69,27 +69,25 @@ var kWeakestRows = function (mat, k) {
     .sort((a, b) => a.value - b.value)
     .map((item) => item.index)
     .slice(0, k);
- };
+};
 
 console.log(kWeakestRows(mat, k));
 
-const haystack = "leetcode"; 
+const haystack = "leetcode";
 const needle = "leeto";
 
-function searchNeedle(haystack, needle){
-const index = haystack.indexOf(needle);
-if(index === -1)return -1
-else return index
-
-
+function searchNeedle(haystack, needle) {
+  const index = haystack.indexOf(needle);
+  if (index === -1) return -1;
+  else return index;
 }
 
-console.log(searchNeedle(haystack, needle))
+console.log(searchNeedle(haystack, needle));
 
 const bum = [4, 5, 2, 1];
- const queries = [3, 10, 21];
+const queries = [3, 10, 21];
 
- var answerQueries = function (bum, queries) {
+var answerQueries = function (bum, queries) {
   const arr = [];
   let sum = 0;
   let check = 0;
@@ -99,37 +97,35 @@ const bum = [4, 5, 2, 1];
     check = 0;
     for (let j = 0; j < bum.length; j++) {
       sum += bum[j];
-      console.log(sum)
+      console.log(sum);
       if (sum <= queries[i]) check += 1;
-      
       else break;
     }
     console.log(check);
     arr.push(check);
   }
   return arr;
+};
 
- };
+console.log(answerQueries(bum, queries));
 
- console.log(answerQueries(bum, queries));
+const nums1 = [1, 2, 2, 1];
+const nums2 = [2, 2];
 
- const nums1 = [1,2,2,1];
-  const nums2 = [2, 2];
+var intersection = function (nums1, nums2) {
+  const intersection = new Set();
+  const a = new Set(nums1);
+  const b = new Set(nums2);
 
-  var intersection = function (nums1, nums2) {
-    const intersection = new Set()
-    const a = new Set(nums1)
-    const b = new Set(nums2)
-    console.log(b)
-    for(let elem of a){
-      if(b.has(elem)){
-        intersection.add(elem)
-      }
+  for (let elem of a) {
+    if (b.has(elem)) {
+      intersection.add(elem);
     }
-    console.log(intersection)
-    const res = Array.from(intersection)
-    console.log(res)
-    return res
-  };
+  }
 
-  console.log(intersection(nums1, nums2));
+  const res = Array.from(intersection);
+
+  return res;
+};
+
+console.log(intersection(nums1, nums2));
