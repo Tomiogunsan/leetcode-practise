@@ -112,3 +112,24 @@ const bum = [4, 5, 2, 1];
  };
 
  console.log(answerQueries(bum, queries));
+
+ const nums1 = [1,2,2,1];
+  const nums2 = [2, 2];
+
+  var intersection = function (nums1, nums2) {
+    const intersection = new Set()
+    const a = new Set(nums1)
+    const b = new Set(nums2)
+    console.log(b)
+    for(let elem of a){
+      if(b.has(elem)){
+        intersection.add(elem)
+      }
+    }
+    console.log(intersection)
+    const res = Array.from(intersection)
+    console.log(res)
+    return res
+  };
+
+  console.log(intersection(nums1, nums2));
