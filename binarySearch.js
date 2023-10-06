@@ -165,16 +165,13 @@ var findTheDistanceValue = function (arr1, arr2, d) {
 
 console.log(findTheDistanceValue(arr1, arr2, d));
 
-
 const nums3 = [3, 0, 1];
 var missingNumber = function (nums3) {
- const set = new Set(nums3)
- console.log(set.size)
- for(let i = 0; i <= nums3.length; i++){
-  console.log(i)
-  if(!set.has(i))return i
- }
-  
+  const set = new Set(nums3);
+
+  for (let i = 0; i <= nums3.length; i++) {
+    if (!set.has(i)) return i;
+  }
 };
 
 console.log(missingNumber(nums3));
