@@ -175,3 +175,45 @@ var missingNumber = function (nums3) {
 };
 
 console.log(missingNumber(nums3));
+
+ const numsb = [1, 3, 5, 6]
+  const targetb = 8;
+
+  var searchInsert = function (numsb, targetb) {
+    let left = 0,
+      right = numsb.length - 1;
+    while (left <= right) {
+      let mid = Math.floor((left + right) / 2);
+      if (numsb[mid] == targetb) {
+        return mid;
+      } else if (numsb[mid] < targetb) {
+        left = mid + 1;
+      } else {
+        right = mid - 1;
+      }
+    }
+    return left;  
+    // let i = numsb.findIndex((n) => n >= targetb);
+    // console.log(i)
+    // return i > -1 ? i : numsb.length;
+  //   const set = new Set(numsb)
+  //   console.log(set)
+  //  for(let i = 0; i < numsb.length; i++){
+  //   console.log(numsb[i])
+  //   if(numsb[i] === targetb){
+  //     return i
+  //   }if( !set.has(targetb)){
+  //     set.add(targetb)
+  //    const arr = Array.from(set).sort((a, b) => a - b);
+    
+  //    console.log(arr)
+  //    for(let j = 0; j < arr.length; j++){
+  //     console.log(j)
+  //     if(arr[j] === targetb) return j
+  //    }
+  //   }
+  //   console.log(set)
+  //  }
+  };
+
+  console.log(searchInsert(numsb, targetb))
