@@ -295,3 +295,12 @@ function quickSortB(arr){
   }
   return [...quickSortB(left), pivot, ...quickSortB(right)]
 }
+
+// mergesort
+function mergeSort(arr){
+  if(arr.length < 2)return arr
+const mid = Math.floor(arr.length/2)
+const leftArr = arr.slice(0, mid)
+const rightArr = aee.slice(mid)
+return mergeSort(leftArr), mergeSort(rightArr)
+}
