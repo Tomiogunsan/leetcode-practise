@@ -232,3 +232,19 @@ console.log(missingNumber(nums3));
    return high;
   };
   console.log(mySqrt(x));
+
+  const arrA = [1,2]
+  const arrB = [3,4,5]
+  function cartesianProduct(arrA, arrB){
+    const res = []
+    let i = 0 
+    let j = 0
+    while(arrB.length){
+      res.push([arrA[i], arrB[j]])
+      j++
+    }
+    i++
+    console.log(res)
+  }
+
+  console.log(cartesianProduct(arrA, arrB))
