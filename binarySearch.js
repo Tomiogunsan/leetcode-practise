@@ -237,14 +237,20 @@ console.log(missingNumber(nums3));
   const arrB = [3,4,5]
   function cartesianProduct(arrA, arrB){
     const res = []
-    let i = 0 
-    let j = 0
-    while(arrB.length){
-      res.push([arrA[i], arrB[j]])
-      j++
+    // let i = 0 
+    // let j = 0
+    // while(arrB.length){
+    //   res.push([arrA[i], arrB[j]])
+    //   j++
+    // }
+    // i++
+    // console.log(res)
+    for(let i = 0; i < arrA.length; i++){
+      for(let j = 0; j < arrB.length; j++){
+        res.push([arrA[i], arrB[j]])
+      }
     }
-    i++
-    console.log(res)
+return res
   }
 
   console.log(cartesianProduct(arrA, arrB))
