@@ -217,3 +217,18 @@ console.log(missingNumber(nums3));
   };
 
   console.log(searchInsert(numsb, targetb))
+
+  const x = 4
+  var mySqrt = function (x) {
+   let low = 0;
+   let  high = x;
+   while (low <= high){
+    const mid = Math.floor((low + high) / 2)
+    const sqr = mid * mid
+    if(sqr <= x) low= mid + 1
+    else high = mid - 1
+    
+   }
+   return high;
+  };
+  console.log(mySqrt(x));
