@@ -318,3 +318,27 @@ function merge(leftArr, rightArr){
 }
 const arr = [8, 20, -2, 4, -6];
 console.log(mergeSort(arr))
+
+// math algorithm
+
+// fibonacci sequence i.e the sum of the third number is the sum of the previous two numbers
+function fibonacci(n){
+  const fib = [0, 1]
+  for(let i = 2; i < n; i++){
+    fib[i] = fib[i - 1] + fib[ i - 2]
+  }
+  return fib
+}
+
+console.log(fibonacci(6))
+
+// factorial of a number
+function factorial(n){
+  let result = 1
+  for(let i = 2; i <=n; i++){
+    result *= i
+  }
+  return result
+}
+
+console.log(factorial(3))
