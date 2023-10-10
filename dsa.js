@@ -54,7 +54,6 @@ function areThereDuplicates(dupli) {
   return false;
 }
 
-
 // multiple pointers pattern
 function sumZero(arr) {
   let left = 0;
@@ -103,20 +102,19 @@ function averagePair(avg, n) {
 const str1 = "abc",
   str2 = "abracadabra";
 function isSubsequence(str1, str2) {
-let j = 0, i = 0
-while(i< str1.length){
-    if(j===str2.length){
-        return false
+  let j = 0,
+    i = 0;
+  while (i < str1.length) {
+    if (j === str2.length) {
+      return false;
     }
-    if(str1[i] === str2[j]){
-        i++
+    if (str1[i] === str2[j]) {
+      i++;
     }
-    j++
+    j++;
+  }
+  return true;
 }
-return true
-
-}
-
 
 // sliding window
 function maxSubarraySum(arr, num) {
@@ -134,8 +132,7 @@ function maxSubarraySum(arr, num) {
   return maxSum;
 }
 
-
-const ns = 5
+const ns = 5;
 let value = [
   [5],
   [3, "ccccc"],
@@ -144,122 +141,122 @@ let value = [
   [5, "eeeee"],
   [4, "ddddd"],
 ];
-class OrderedStream{
-  constructor(ns){
-this.pointer = 0
-this.newarr = []
-this.newarr.length = ns
+class OrderedStream {
+  constructor(ns) {
+    this.pointer = 0;
+    this.newarr = [];
+    this.newarr.length = ns;
   }
-  insert(idkey, value){
-    let result = []
-    this.newarr[idkey -1] = value
-    while(this.newarr[this.pointer]){
-      result.push(this.newarr[this.pointer])
-      this.pointer++
+  insert(idkey, value) {
+    let result = [];
+    this.newarr[idkey - 1] = value;
+    while (this.newarr[this.pointer]) {
+      result.push(this.newarr[this.pointer]);
+      this.pointer++;
       console.log(result);
     }
-    return result
+    return result;
   }
 }
 
 // binary search
-function binarySearch(arr, elem){
+function binarySearch(arr, elem) {
   let start = 0;
-  let end = arr.length - 1
-  let middle = Math.floor((start + end)/ 2)
-  while(arr[middle] !== elem && start <= end){
-    if(elem < arr[middle]) end = middle - 1;
+  let end = arr.length - 1;
+  let middle = Math.floor((start + end) / 2);
+  while (arr[middle] !== elem && start <= end) {
+    if (elem < arr[middle]) end = middle - 1;
     else start = middle + 1;
-    middle = Math.floor((start + end)/2)
+    middle = Math.floor((start + end) / 2);
   }
-  return arr[middle] === elem ? middle : -1
+  return arr[middle] === elem ? middle : -1;
 }
 
-console.log(binarySearch([2,5,6,9,13,15,28,30], 5))
+console.log(binarySearch([2, 5, 6, 9, 13, 15, 28, 30], 5));
 
-function naiveSearch(long, short){
+function naiveSearch(long, short) {
   let count = 0;
-  for(let i = 0; i < long.length; i++){
-    for(let j = 0; j < short.length; j++){
-    console.log(j, i + j)
-    if(short[j] !== long[i + j]){
-      console.log("break")
-      break;
-    }
-    if(j === short.length - 1){
-      count++
-    }
+  for (let i = 0; i < long.length; i++) {
+    for (let j = 0; j < short.length; j++) {
+      console.log(j, i + j);
+      if (short[j] !== long[i + j]) {
+        console.log("break");
+        break;
+      }
+      if (j === short.length - 1) {
+        count++;
+      }
     }
   }
-  return count
+  return count;
 }
 
-naiveSearch("lorie loled", "lol")
+naiveSearch("lorie loled", "lol");
 
 // bubble sort
-function bubbleSort(arr){
-  for(var i = arr.length; i > 0; i--){
-    for(var j = 0; j < i - 1; j++){
+function bubbleSort(arr) {
+  for (var i = arr.length; i > 0; i--) {
+    for (var j = 0; j < i - 1; j++) {
       console.log(arr, arr[j]);
-      if(arr[j] > arr[j + 1]){
-        var temp = arr[j]
-        arr[j] = arr[j + 1]
-        arr[j + 1] = temp
+      if (arr[j] > arr[j + 1]) {
+        var temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
       }
     }
   }
-  return arr
+  return arr;
 }
 
-console.log(bubbleSort([15,34,10,18,50]))
+console.log(bubbleSort([15, 34, 10, 18, 50]));
 
 // selection sort
-function selectionSort(arr){
-  for(var i = 0; i < arr.length; i++){
+function selectionSort(arr) {
+  for (var i = 0; i < arr.length; i++) {
     var lowest = i;
-    for(var j = i+ 1; j < arr.length; j++){
-      if(arr[j] < arr[lowest]){
-        lowest = j
+    for (var j = i + 1; j < arr.length; j++) {
+      if (arr[j] < arr[lowest]) {
+        lowest = j;
       }
     }
-    if(i !== lowest){
+    if (i !== lowest) {
       var temp = arr[i];
-      arr[i] = arr[lowest]
-      arr[lowest] = temp
+      arr[i] = arr[lowest];
+      arr[lowest] = temp;
     }
   }
   return arr;
 }
 
-console.log(selectionSort([0,2,43,5,75,18,21]));
+console.log(selectionSort([0, 2, 43, 5, 75, 18, 21]));
 
 // insertion sort
-function insertionSort(arr){
-  for(var i = 1; i < arr.length; i++){
+function insertionSort(arr) {
+  for (var i = 1; i < arr.length; i++) {
     var currentVal = arr[i];
-    for(var j = i - 1; j>=0 && arr[j] > currentVal; j--){
-      arr[j+1] = arr[j]
+    for (var j = i - 1; j >= 0 && arr[j] > currentVal; j--) {
+      arr[j + 1] = arr[j];
     }
-    arr[j+1] = currentVal
+    arr[j + 1] = currentVal;
   }
   return arr;
 }
 
-console.log(insertionSort([2,1,9,76,4]))
+console.log(insertionSort([2, 1, 9, 76, 4]));
 
 // quicksort
-function pivot(arr, start = 0, end = arr.length - 1){
+function pivot(arr, start = 0, end = arr.length - 1) {
   const swap = (arr, idx1, idx2) => {
-    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]]
+    [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
   };
   //  we are assuming the pivot is always the first element
   let pivot = arr[start];
   let swapIdx = start;
 
-  for(let i = start + 1; i<=end; i++){
-    if(pivot > arr[i]){
+  for (let i = start + 1; i <= end; i++) {
+    if (pivot > arr[i]) {
       swapIdx++;
-      swap(arr, swapIdx, i)
+      swap(arr, swapIdx, i);
     }
   }
 
@@ -268,92 +265,108 @@ function pivot(arr, start = 0, end = arr.length - 1){
   return swapIdx;
 }
 
-function quickSort(arr, left = 0, right = arr.length - 1){
-  if(left < right){
-    let pivotIndex = pivot(arr, left, right)
+function quickSort(arr, left = 0, right = arr.length - 1) {
+  if (left < right) {
+    let pivotIndex = pivot(arr, left, right);
     // left
-    quickSort(arr, left, pivotIndex - 1)
+    quickSort(arr, left, pivotIndex - 1);
     // right
-    quickSort(arr, pivotIndex+ 1, right)
+    quickSort(arr, pivotIndex + 1, right);
   }
   return arr;
 }
 
-console.log(quickSort([4,6,9,1,2,5]))
+console.log(quickSort([4, 6, 9, 1, 2, 5]));
 
 // another implementation of quicksort
-function quickSortB(arr){
-  let pivot = arr[arr.length - 1]
-  let left = []
-  let right = []
-  for(let i = 0; i< arr.length - 1; i++){
-    if(arr[i] < pivot){
-      left.push(arr[i])
-    }else {
-      right.push(arr[i])
+function quickSortB(arr) {
+  let pivot = arr[arr.length - 1];
+  let left = [];
+  let right = [];
+  for (let i = 0; i < arr.length - 1; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
     }
   }
-  return [...quickSortB(left), pivot, ...quickSortB(right)]
+  return [...quickSortB(left), pivot, ...quickSortB(right)];
 }
 
 // mergesort
-function mergeSort(arr){
-  if(arr.length < 2)return arr
-const mid = Math.floor(arr.length/2)
-const leftArr = arr.slice(0, mid)
-const rightArr = arr.slice(mid)
-return mergeSort(leftArr), mergeSort(rightArr)
+function mergeSort(arr) {
+  if (arr.length < 2) return arr;
+  const mid = Math.floor(arr.length / 2);
+  const leftArr = arr.slice(0, mid);
+  const rightArr = arr.slice(mid);
+  return mergeSort(leftArr), mergeSort(rightArr);
 }
 
-function merge(leftArr, rightArr){
-  const sortedArr = []
-  while(leftArr.length <= rightArr[0]){
-    if(leftArr[0] <= rightArr[0]){
-      sortedArr.push(leftArr.shift())
-    }else {
-      sortedArr.push(rightArr.shift())
+function merge(leftArr, rightArr) {
+  const sortedArr = [];
+  while (leftArr.length <= rightArr.length) {
+    if (leftArr[0] <= rightArr[0]) {
+      sortedArr.push(leftArr.shift());
+    } else {
+      sortedArr.push(rightArr.shift());
     }
   }
-  return[...sortedArr, ...leftArr, ...rightArr]
+  return [...sortedArr, ...leftArr, ...rightArr];
 }
 const arr = [8, 20, -2, 4, -6];
-console.log(mergeSort(arr))
+console.log(mergeSort(arr));
 
 // math algorithm
 
 // fibonacci sequence i.e the sum of the third number is the sum of the previous two numbers
-function fibonacci(n){
-  const fib = [0, 1]
-  for(let i = 2; i < n; i++){
-    fib[i] = fib[i - 1] + fib[ i - 2]
+function fibonacci(n) {
+  const fib = [0, 1];
+  for (let i = 2; i < n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
   }
-  return fib
+  return fib;
 }
 
-console.log(fibonacci(6))
+console.log(fibonacci(6));
 
 // factorial of a number
-function factorial(n){
-  let result = 1
-  for(let i = 2; i <=n; i++){
-    result *= i
+function factorial(n) {
+  let result = 1;
+  for (let i = 2; i <= n; i++) {
+    result *= i;
   }
-  return result
+  return result;
 }
 
-console.log(factorial(3))
+console.log(factorial(3));
 
 // prime number
-function isPrime(n){
-  if(n < 2){
-    return false
+function isPrime(n) {
+  if (n < 2) {
+    return false;
   }
-  for(let i = 2; i <= Math.sqrt(n); i++){
-    if( n % i === 0){
-      return false
+  for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
+      return false;
     }
+  }
+  return true;
+}
+
+console.log(isPrime(8));
+
+// power of two
+function powerOfTwo(n) {
+  if (n < 1) {
+    return false;
+  }
+  while (n > 1) {
+    if (n % 2 !== 0) {
+      return false;
+    } 
+    n = n / 2; 
   }
   return true
 }
 
-console.log(isPrime(8))
+console.log(powerOfTwo(1));
