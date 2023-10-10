@@ -49,29 +49,26 @@ var maxProduct = function (ma) {
 console.log(maxProduct(ma));
 
 const months = ["Jan", "March", "April", "June"];
-const nw = ['dec', 'nov', 'oct']
+const nw = ["dec", "nov", "oct"];
 months.splice(3, 0, ...nw);
-console.log(months)
+console.log(months);
 
 const nums1 = [1, 2, 3, 0, 0, 0];
 const m = 3;
 const nums2 = [2, 5, 6];
 const n = 3;
 
-
-
 var merge = function (nums1, m, nums2, n) {
-    // method 1
-    // nums1.splice(m, n, ...nums2)
-    // nums1.sort((a,b) => a-b)
-    // method 2
-    
-    nums1.splice(m, m + n)
-console.log(nums1.splice(m,m+n));  
-const res = [...nums1, ...nums2]
-console.log(res)
-res.sort((a,b) => a-b)
-return res
-}
+  // method 1
+  // nums1.splice(m, n, ...nums2)
+  // nums1.sort((a,b) => a-b)
+  // method 2
+
+  nums1.splice(m, m + n);
+
+  const res = [...nums1, ...nums2];
+
+  return res.sort((a, b) => a - b);
+};
 
 console.log(merge(nums1, m, nums2, n));
