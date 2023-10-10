@@ -65,7 +65,7 @@ var merge = function (nums1, m, nums2, n) {
     // nums1.splice(m, n, ...nums2)
     // nums1.sort((a,b) => a-b)
     // method 2
-    
+    console.log(nums1.push.apply(nums1,nums2))
     nums1.splice(m, m + n)
 console.log(nums1.splice(m,m+n));  
 const res = [...nums1, ...nums2]
