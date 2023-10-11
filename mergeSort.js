@@ -72,3 +72,28 @@ var merge = function (nums1, m, nums2, n) {
 };
 
 console.log(merge(nums1, m, nums2, n));
+
+const nums = [3, 2, 3];
+var majorityElement = function (nums) {
+  const lookup = {};
+
+  for (let i of nums) {
+    lookup[i] = lookup[i] + 1 || 1;
+  }
+  console.log(lookup);
+//   let max = -Infinity
+//   let highest = null
+//  for(let key in lookup){
+// if(lookup[key] > max){
+//   max = lookup[key]
+//   highest = key
+// }
+//  }
+//   return highest
+let keys=Object.keys(lookup)
+keys.sort((a,b) => lookup[b] - lookup[a])
+return keys[0]
+
+};
+
+console.log(majorityElement(nums));
