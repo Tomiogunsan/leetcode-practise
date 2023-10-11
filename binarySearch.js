@@ -122,7 +122,7 @@ var intersection = function (nums1, nums2) {
       intersection.add(elem);
     }
   }
-
+console.log(intersection)
   const res = Array.from(intersection);
 
   return res;
