@@ -97,3 +97,17 @@ return keys[0]
 };
 
 console.log(majorityElement(nums));
+
+const numsa = [1, 2, 3, 1];
+
+var containsDuplicate = function (numsa) {
+  const lookup = {}
+  numsa.sort((a,b) => a-b)
+  console.log(numsa)
+  for(let i = 0; i < numsa.length; i++){
+    if(numsa[i] === numsa[i + 1])return true
+  }
+  return false
+};
+
+console.log(containsDuplicate(numsa));
