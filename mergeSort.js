@@ -81,19 +81,18 @@ var majorityElement = function (nums) {
     lookup[i] = lookup[i] + 1 || 1;
   }
   console.log(lookup);
-//   let max = -Infinity
-//   let highest = null
-//  for(let key in lookup){
-// if(lookup[key] > max){
-//   max = lookup[key]
-//   highest = key
-// }
-//  }
-//   return highest
-let keys=Object.keys(lookup)
-keys.sort((a,b) => lookup[b] - lookup[a])
-return keys[0]
-
+  //   let max = -Infinity
+  //   let highest = null
+  //  for(let key in lookup){
+  // if(lookup[key] > max){
+  //   max = lookup[key]
+  //   highest = key
+  // }
+  //  }
+  //   return highest
+  let keys = Object.keys(lookup);
+  keys.sort((a, b) => lookup[b] - lookup[a]);
+  return keys[0];
 };
 
 console.log(majorityElement(nums));
@@ -101,13 +100,12 @@ console.log(majorityElement(nums));
 const numsa = [1, 2, 3, 1];
 
 var containsDuplicate = function (numsa) {
-  const lookup = {}
-  numsa.sort((a,b) => a-b)
-  console.log(numsa)
-  for(let i = 0; i < numsa.length; i++){
-    if(numsa[i] === numsa[i + 1])return true
+  numsa.sort((a, b) => a - b);
+
+  for (let i = 0; i < numsa.length; i++) {
+    if (numsa[i] === numsa[i + 1]) return true;
   }
-  return false
+  return false;
 };
 
 console.log(containsDuplicate(numsa));
