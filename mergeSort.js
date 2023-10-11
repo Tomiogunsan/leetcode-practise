@@ -111,41 +111,39 @@ var containsDuplicate = function (numsa) {
 console.log(containsDuplicate(numsa));
 
 const numsA = [1, 2, 2, 1];
- const numsB = [2, 2];
+const numsB = [2, 2];
 var intersect = function (numsA, numsB) {
-//  const map = new Map()
-//  for(let n of numsA){
-//   if(map.has(n)){
-//     map.set(n, map.get(n) + 1)
-//   }else{
-//     map.set(n,1)
-//   }
-//   console.log(map)
-//  }
-//  const res = []
-//  for(let n of numsB){
-//   console.log(map.get(n))
-//   if (map.has(n) && map.get(n) > 0) {
-//     res.push(n);
-//     map.set(n, map.get(n) - 1);
-//   }
-//  }
-// console.log(res)
-const lookup = {}
-for(let n of numsA){
-lookup[n] = lookup[n] + 1 || 1
-}
-const res =[]
-console.log(lookup)
-for(let n of numsB){
-  console.log(lookup[n]);
-  if(lookup[n] > 0 ){
-    lookup[n] = lookup[n] - 1;
- res.push(n)
- 
+  //  const map = new Map()
+  //  for(let n of numsA){
+  //   if(map.has(n)){
+  //     map.set(n, map.get(n) + 1)
+  //   }else{
+  //     map.set(n,1)
+  //   }
+  //   console.log(map)
+  //  }
+  //  const res = []
+  //  for(let n of numsB){
+  //   console.log(map.get(n))
+  //   if (map.has(n) && map.get(n) > 0) {
+  //     res.push(n);
+  //     map.set(n, map.get(n) - 1);
+  //   }
+  //  }
+  // console.log(res)
+  const lookup = {};
+  for (let n of numsA) {
+    lookup[n] = lookup[n] + 1 || 1;
   }
-}
-return res
+  const res = [];
+
+  for (let n of numsB) {
+    if (lookup[n] > 0) {
+      lookup[n] = lookup[n] - 1;
+      res.push(n);
+    }
+  }
+  return res;
 };
 
 console.log(intersect(numsA, numsB));
