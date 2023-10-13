@@ -147,3 +147,35 @@ var intersect = function (numsA, numsB) {
 };
 
 console.log(intersect(numsA, numsB));
+
+const s = "aacc";
+ const t = "ccac";
+var isAnagram = function (s, t) {
+   if (s.length !== t.length) {
+     return false;
+   }
+   let lookup = {}
+   for(let i = 0; i < s.length; i++){
+    lookup[s[i]] = lookup[s[i]] + 1 || 1
+   }
+   for(let j = 0; j < t.length; j++){
+    if(!lookup[t[j]])return false
+    else{
+      lookup[t[j]]--
+    }
+   }
+   return true
+  
+  // let se = s.split('').sort()
+  // console.log(se)
+  //  let te = t.split('').sort()
+  // console.log(te)
+  // if(s.length !== t.length)return false
+  // for(let i = 0; i < se.length; i++){
+  //   if(se[i] !== te[i])return false
+    
+  // }
+  // return true;
+};
+
+console.log(isAnagram(s,t))
