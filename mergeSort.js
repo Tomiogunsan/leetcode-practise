@@ -166,16 +166,7 @@ var isAnagram = function (s, t) {
    }
    return true
   
-  // let se = s.split('').sort()
-  // console.log(se)
-  //  let te = t.split('').sort()
-  // console.log(te)
-  // if(s.length !== t.length)return false
-  // for(let i = 0; i < se.length; i++){
-  //   if(se[i] !== te[i])return false
-    
-  // }
-  // return true;
+  
 };
 
 console.log(isAnagram(s,t))
