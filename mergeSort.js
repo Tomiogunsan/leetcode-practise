@@ -166,7 +166,7 @@ var isAnagram = function (s, t) {
    }
    return true
   
-  
+  // note: you can also sort an alphabet
 };
 
 console.log(isAnagram(s,t))
