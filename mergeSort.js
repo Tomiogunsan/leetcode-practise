@@ -182,6 +182,7 @@ var maxProductDifference = function (num) {
 
 console.log(maxProductDifference(num));
 
+// max product of two element
 const nu = [1,5,4,5];
 var maxProduct = function (nu) {
 nu = nu.sort((a,b) => a-b)
