@@ -170,3 +170,22 @@ var isAnagram = function (s, t) {
 };
 
 console.log(isAnagram(s,t))
+
+// Maximum Product Difference Between Two Pairs
+
+ const num = [5, 6, 2, 7, 4];
+var maxProductDifference = function (num) {
+  num = num.sort((a, b) => a - b);
+  console.log(nums);
+  return num[num.length - 1] * num[num.length - 2] - num[0] * num[1];
+};
+
+console.log(maxProductDifference(num));
+
+const nu = [1,5,4,5];
+var maxProduct = function (nu) {
+nu = nu.sort((a,b) => a-b)
+return (nu[nu.length - 2] - 1 )* (nu[nu.length - 1] - 1)
+};
+
+console.log(maxProduct(nu));
