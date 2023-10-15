@@ -190,3 +190,8 @@ return (nu[nu.length - 2] - 1 )* (nu[nu.length - 1] - 1)
 };
 
 console.log(maxProduct(nu));
+
+ const grid = [
+   [1, 2, 4],
+   [3, 3, 1],
+ ];
