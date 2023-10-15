@@ -195,3 +195,5 @@ console.log(maxProduct(nu));
    [1, 2, 4],
    [3, 3, 1],
  ];
+
+ var deleteGreatestValue = function (grid) {};
