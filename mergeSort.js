@@ -211,3 +211,20 @@ var deleteGreatestValue = function (grid) {
   return sum;
 };
 console.log(deleteGreatestValue(grid));
+
+const digits = [9];
+
+var add = function (digits) {
+  const ans = digits.pop() + 1;
+  console.log(ans);
+  if (ans >= 10) {
+    const e = ans/10
+   const re = ans % 10;
+    digits.push(e,re)
+  } else {
+    digits.push(ans);
+  }
+  
+  return digits;
+};
+console.log(add(digits));
