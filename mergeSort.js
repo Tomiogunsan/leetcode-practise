@@ -217,13 +217,3 @@ return sum
  console.log(deleteGreatestValue(grid));
 
 
- const array = [
-   [1, 2, 4],
-   [1, 3, 3],
- ];
-
- const maxValues = array.map((subarray) => subarray.pop()); // Extract and store the last elements of each subarray
-console.log(maxValues)
- const max = Math.max(...maxValues); // Find the maximum value among the last elements
-
- console.log(max); 
