@@ -149,31 +149,31 @@ var intersect = function (numsA, numsB) {
 console.log(intersect(numsA, numsB));
 
 const s = "aacc";
- const t = "ccac";
+const t = "ccac";
 var isAnagram = function (s, t) {
-   if (s.length !== t.length) {
-     return false;
-   }
-   let lookup = {}
-   for(let i = 0; i < s.length; i++){
-    lookup[s[i]] = lookup[s[i]] + 1 || 1
-   }
-   for(let j = 0; j < t.length; j++){
-    if(!lookup[t[j]])return false
-    else{
-      lookup[t[j]]--
+  if (s.length !== t.length) {
+    return false;
+  }
+  let lookup = {};
+  for (let i = 0; i < s.length; i++) {
+    lookup[s[i]] = lookup[s[i]] + 1 || 1;
+  }
+  for (let j = 0; j < t.length; j++) {
+    if (!lookup[t[j]]) return false;
+    else {
+      lookup[t[j]]--;
     }
-   }
-   return true
-  
+  }
+  return true;
+
   // note: you can also sort an alphabet
 };
 
-console.log(isAnagram(s,t))
+console.log(isAnagram(s, t));
 
 // Maximum Product Difference Between Two Pairs
 
- const num = [5, 6, 2, 7, 4];
+const num = [5, 6, 2, 7, 4];
 var maxProductDifference = function (num) {
   num = num.sort((a, b) => a - b);
   console.log(nums);
@@ -183,37 +183,31 @@ var maxProductDifference = function (num) {
 console.log(maxProductDifference(num));
 
 // max product of two element
-const nu = [1,5,4,5];
+const nu = [1, 5, 4, 5];
 var maxProduct = function (nu) {
-nu = nu.sort((a,b) => a-b)
-return (nu[nu.length - 2] - 1 )* (nu[nu.length - 1] - 1)
+  nu = nu.sort((a, b) => a - b);
+  return (nu[nu.length - 2] - 1) * (nu[nu.length - 1] - 1);
 };
 
 console.log(maxProduct(nu));
 
- const grid = [
-   [1, 2, 4],
-   [3, 3, 1],
- ];
+const grid = [
+  [1, 2, 4],
+  [3, 3, 1],
+];
 
- var deleteGreatestValue = function (grid) {
-  
-    grid.map((gr) => gr.sort((a,b) => a - b))
-   console.log(grid)
-  
-    let sum = 0
+var deleteGreatestValue = function (grid) {
+  grid.map((gr) => gr.sort((a, b) => a - b));
+
+  let sum = 0;
+
   while (grid[0].length) {
     let column = [];
-    for (let row of grid) 
-  
-    column.push(row.pop());
-    
+    for (let row of grid) column.push(row.pop());
+
     sum += Math.max(...column);
   }
 
-return sum
- 
-}
- console.log(deleteGreatestValue(grid));
-
-
+  return sum;
+};
+console.log(deleteGreatestValue(grid));
