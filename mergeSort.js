@@ -196,4 +196,33 @@ console.log(maxProduct(nu));
    [3, 3, 1],
  ];
 
- var deleteGreatestValue = function (grid) {};
+ var deleteGreatestValue = function (grid) {
+  
+   const re = grid.map((gr) => gr.sort((a,b) => a - b))
+   console.log(re[1])
+   let out = []
+    let sum = 0
+  for(let i = 0; i < re.length; i++){
+   out.push(re[i].pop())
+   console.log(out)
+   sum += Math.max(...out)
+   console.log(sum)
+   }
+ 
+
+return sum
+ 
+}
+ console.log(deleteGreatestValue(grid));
+
+
+ const array = [
+   [1, 2, 4],
+   [1, 3, 3],
+ ];
+
+ const maxValues = array.map((subarray) => subarray.pop()); // Extract and store the last elements of each subarray
+console.log(maxValues)
+ const max = Math.max(...maxValues); // Find the maximum value among the last elements
+
+ console.log(max); 
