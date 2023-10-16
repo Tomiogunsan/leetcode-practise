@@ -198,12 +198,12 @@ console.log(maxProduct(nu));
 
  var deleteGreatestValue = function (grid) {
   
-   const re = grid.map((gr) => gr.sort((a,b) => a - b))
-   console.log(re[1])
+    grid.map((gr) => gr.sort((a,b) => a - b))
+   console.log(grid)
    let out = []
     let sum = 0
-  for(let i = 0; i < re.length; i++){
-   out.push(re[i].pop())
+  for(let i = 0; i < grid.length; i++){
+   out.push(grid[i].pop())
    console.log(out)
    sum += Math.max(...out)
    console.log(sum)
