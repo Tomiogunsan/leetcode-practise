@@ -200,15 +200,16 @@ console.log(maxProduct(nu));
   
     grid.map((gr) => gr.sort((a,b) => a - b))
    console.log(grid)
-   let out = []
+  
     let sum = 0
-  for(let i = 0; i < grid.length; i++){
-   out.push(grid[i].pop())
-   console.log(out)
-   sum += Math.max(...out)
-   console.log(sum)
-   }
- 
+  while (grid[0].length) {
+    let column = [];
+    for (let row of grid) 
+  
+    column.push(row.pop());
+    
+    sum += Math.max(...column);
+  }
 
 return sum
  
