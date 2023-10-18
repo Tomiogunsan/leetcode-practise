@@ -4,6 +4,7 @@ class Student{
         this.lastName = lastName
         this.grade = year
     }
+    // adding methods
     fullName(){
         return `Your name is ${this.firstName} ${this.lastName}`
     }
