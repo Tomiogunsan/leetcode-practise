@@ -4,7 +4,10 @@ class Student{
         this.lastName = lastName
         this.grade = year
     }
+    fullName(){
+        return `Your name is ${this.firstName} ${this.lastName}`
+    }
 }
 
 let student = new Student('eilly', 'grd', 6)
-console.log(student)
+console.log(student.fullName())
