@@ -38,7 +38,7 @@ var countNegatives = function (grid) {
   return count;
 };
 
-console.log(countNegatives(grid));
+
 
 const mat = [
   [1, 1, 0, 0, 0],
