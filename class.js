@@ -11,4 +11,3 @@ class Student{
 }
 
 let student = new Student('eilly', 'grd', 6)
-console.log(student.fullName())
