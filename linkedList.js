@@ -40,5 +40,16 @@ class SinglyLinkedList{
         }
         return current
     }
+    // shift
+    shift(){
+        if(!this.head === 0)return undefined
+        let currentHead = this.head
+        this.head = currentHead.next
+        this.length--
+        if(this.length === 0){
+            this.tail = null;
+        }
+        return currentHead
+    }
 }
 let list = new SinglyLinkedList()
