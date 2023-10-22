@@ -228,3 +228,13 @@ var add = function (digits) {
   return digits;
 };
 console.log(add(digits));
+
+const ni = 4009;
+var minimumSum = function (ni) {
+ const r =  ni.toString().split('').sort()
+  console.log(ni.toString().split("").sort());
+console.log(r[0] + r[1])
+const res = parseInt(r[0] + r[3]) + parseInt(r[1] + r[2])
+return res
+};
+console.log(minimumSum(ni));
