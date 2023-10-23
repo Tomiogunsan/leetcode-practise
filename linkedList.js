@@ -132,3 +132,75 @@ print(){
 }
 }
 let list = new SinglyLinkedList();
+
+// code evolution linked list
+class Node {
+  constructor(value){
+    this.value = value
+    this.next = null
+  }
+}
+
+class LinkedList {
+  constructor(){
+    this.head = null
+    this.size = 0
+  }
+  isEmpty(){
+    return this.size === 0
+  }
+  getSize(){
+    return this.size
+  }
+  prepend(value){
+    const node = new Node(value)
+    if(this.isEmpty()){
+      this.head = node
+    }else{
+      node.next = this.head
+      this.head = node
+    }
+    this.size++
+  }
+  print(){
+    if(this.isEmpty()){
+      console.log('List is empty')
+    }else{
+      let curr = this.head
+      let listValues = ''
+      while(curr){
+        listValues += `${curr.value}`
+        curr = curr.next
+      }
+      console.log(listValues)
+    }
+  }
+}
+const lis = new LinkedList()
+
+
+const list1 = [1, 2, 4];
+ const list2 = [1, 3, 4];
+ var mergeTwoLists = function (list1, list2) {
+  
+//  const re = list1.concat(list2)
+//   console.log(list1.concat(list2));
+//   console.log(re.sort())
+//   return re.sort()
+let node = new Node(0,null)
+let currentNode = node
+while(list1 && list2){
+if(list1.val< list2.val){
+  currentNode.next = list1
+  list1 = list1.next
+}else{
+  currentNode.next = list2
+  list2 = list2.next
+}
+currentNode = currentNode.next;
+}
+currentNode.next = list1 || list2
+return node.next
+ };
+
+ console.log(mergeTwoLists(list1, list2));
