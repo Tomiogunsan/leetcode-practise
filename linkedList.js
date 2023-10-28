@@ -134,12 +134,12 @@ print(){
 let list = new SinglyLinkedList();
 
 // code evolution linked list
-class Node {
-  constructor(value){
-    this.value = value
-    this.next = null
-  }
-}
+// class Node {
+//   constructor(value){
+//     this.value = value
+//     this.next = null
+//   }
+// }
 
 class LinkedList {
   constructor(){
@@ -233,10 +233,7 @@ const list1 = [1, 2, 4];
  const list2 = [1, 3, 4];
  var mergeTwoLists = function (list1, list2) {
   
-//  const re = list1.concat(list2)
-//   console.log(list1.concat(list2));
-//   console.log(re.sort())
-//   return re.sort()
+
 let node = new Node(0,null)
 let currentNode = node
 while(list1 && list2){
@@ -254,3 +251,25 @@ return node.next
  };
 
  console.log(mergeTwoLists(list1, list2));
+
+ 
+ function listNode(val, next) {
+     this.val = (val===undefined ? 0 : val)
+      this.next = (next===undefined ? null : next)
+  }
+
+ const head = [1, 1, 2];
+ var deleteDuplicates = function (head) {
+  var temp = head;
+  while( temp !== null ){
+    if((temp.next !== null) && temp.val === temp.next.val){
+      var next_next = temp.next.next
+      var deleteNode = temp.next;
+      temp.next = next_next
+      delete(deleteNode)
+    }else {
+      temp = temp.next
+    }
+  }
+  return head
+ };
