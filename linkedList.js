@@ -260,16 +260,17 @@ return node.next
 
  const head = [1, 1, 2];
  var deleteDuplicates = function (head) {
-  var temp = head;
-  while( temp !== null ){
-    if((temp.next !== null) && temp.val === temp.next.val){
-      var next_next = temp.next.next
-      var deleteNode = temp.next;
-      temp.next = next_next
-      delete(deleteNode)
+  if(head === null) return head
+  let temp = head;
+  while(temp && temp.next){
+    if(temp.next.val === temp.val){
+      temp.next = temp.next.next
     }else {
       temp = temp.next
     }
   }
+ 
   return head
  };
+
+ console.log(deleteDuplicates(head))
