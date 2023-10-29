@@ -133,13 +133,13 @@ print(){
 }
 let list = new SinglyLinkedList();
 
-code evolution linked list
-class Node {
-  constructor(value){
-    this.value = value
-    this.next = null
-  }
-}
+// code evolution linked list
+// class Node {
+//   constructor(value){
+//     this.value = value
+//     this.next = null
+//   }
+// }
 
 class LinkedList {
   constructor(){
