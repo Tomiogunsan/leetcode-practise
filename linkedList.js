@@ -303,6 +303,18 @@ return node.next
      B = B ? B.next : headA;
    }
    return A;
+
+  //  with hash method
+  // let set = new Set();
+  // while (headA) {
+  //   set.add(headA);
+  //   headA = headA.next;
+  // }
+  // while (headB) {
+  //   if (set.has(headB)) return headB;
+  //   headB = headB.next;
+  // }
+  // return null;
  };
 
  console.log(getIntersectionNode(listA, listB));
