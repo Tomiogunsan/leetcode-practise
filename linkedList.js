@@ -290,3 +290,19 @@ return node.next
  };
 
  console.log(hasCycle(hea));
+
+
+ const listA = [4, 1, 8, 4, 5];
+ const listB = [5, 6, 1, 8, 4, 5];
+ var getIntersectionNode = function (headA, headB) {
+   if (!headA || !headB) return null;
+   let A = headA,
+     B = headB;
+   while (A != B) {
+     A = A ? A.next : headB;
+     B = B ? B.next : headA;
+   }
+   return A;
+ };
+
+ console.log(getIntersectionNode(listA, listB));
