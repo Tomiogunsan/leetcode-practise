@@ -212,6 +212,28 @@ class LinkedList {
     this.size--
     return removedNode.value
   }
+  removeValue(value){
+    if(this.isEmpty()){
+      return null
+    }
+    if(this.head.value === value){
+      this.head = this.head.next 
+      this.size--
+      return value
+    }else {
+      let prev = this.head
+      while(prev.next && prev.next.value !== val){
+        prev = prev.next
+      }
+      if(prev.next){
+      const  removedNode = prev.next
+        prev.next = removedNode.next
+        this.size--
+        return value
+      }
+      return null
+    }
+  }
   print(){
     if(this.isEmpty()){
       console.log('List is empty')
