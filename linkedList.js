@@ -274,3 +274,19 @@ return node.next
  };
 
  console.log(deleteDuplicates(head))
+
+
+ const hea = [3, 2, 0, -4]
+ const pos = 1;
+ var hasCycle = function (hea) {
+  let temp = hea;
+
+  while (temp && temp.next) {
+    hea = hea.next;
+    temp = temp.next.next;
+    if (hea === temp) return true;
+  }
+  return false;
+ };
+
+ console.log(hasCycle(hea));
