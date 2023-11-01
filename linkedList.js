@@ -367,13 +367,13 @@ return node.next
 
  console.log(getIntersectionNode(listA, listB));
 
-const head = [1, 2, 3, 4, 5];
+// const head = [1, 2, 3, 4, 5];
  var middleNode = function (head) {
-  //  let fast = head;
-  //  let slow = head;
-  //  while (fast && fast.next) {
-  //    slow = slow.next;
-  //    fast = fast.next.next;
-  //  }
-  //  return slow;
+   let fast = head;
+   let slow = head;
+   while (fast && fast.next) {
+     slow = slow.next;
+     fast = fast.next.next;
+   }
+   return slow;
  };
