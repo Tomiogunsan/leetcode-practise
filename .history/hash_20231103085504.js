@@ -213,7 +213,7 @@ MyHashSet.prototype.add = function (key) {
   for(let i = 0; i < this.arr.length; i++){
 if(this.arr[i] === key) return
 }
-this.arr.push(key)
+
 };
 
 /**

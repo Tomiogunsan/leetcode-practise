@@ -197,33 +197,3 @@ return count
 
 console.log(countConsistentStrings(allowed, word));
 
-// build hash table from scratch
-
-class  MyHashSet{
-constructor(){
-  this.arr = []
-}
-}
-/**
- * @param {number} key
- * @return {void}
- */
-MyHashSet.prototype.add = function (key) {
-  if(this.arr.length === 0) this.arr.push(key)
-  for(let i = 0; i < this.arr.length; i++){
-if(this.arr[i] === key) return
-}
-this.arr.push(key)
-};
-
-/**
- * @param {number} key
- * @return {void}
- */
-MyHashSet.prototype.remove = function (key) {};
-
-/**
- * @param {number} key
- * @return {boolean}
- */
-MyHashSet.prototype.contains = function (key) {};

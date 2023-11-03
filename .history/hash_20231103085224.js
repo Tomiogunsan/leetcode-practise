@@ -208,13 +208,7 @@ constructor(){
  * @param {number} key
  * @return {void}
  */
-MyHashSet.prototype.add = function (key) {
-  if(this.arr.length === 0) this.arr.push(key)
-  for(let i = 0; i < this.arr.length; i++){
-if(this.arr[i] === key) return
-}
-this.arr.push(key)
-};
+MyHashSet.prototype.add = function (key) {};
 
 /**
  * @param {number} key
