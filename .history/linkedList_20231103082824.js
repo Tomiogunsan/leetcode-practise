@@ -380,13 +380,5 @@ return node.next
 
  var getDecimalValue = function(head) {
     let temp = head, len = 0, sum =  0
-    while(temp){
-      temp = temp.next
-      len++
-    }
-    while(head){
-      sum += Math.pow(2, --len) * head.val
-      head = head.next
-    }
-    return sum;
+    
 };

@@ -388,5 +388,5 @@ return node.next
       sum += Math.pow(2, --len) * head.val
       head = head.next
     }
-    return sum;
+    return sum
 };

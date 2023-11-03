@@ -384,9 +384,5 @@ return node.next
       temp = temp.next
       len++
     }
-    while(head){
-      sum += Math.pow(2, --len) * head.val
-      head = head.next
-    }
-    return sum;
+    while()
 };
