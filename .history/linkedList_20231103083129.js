@@ -378,7 +378,7 @@ return node.next
    return slow;
  };
 
- const he = [1,0, 1]
+ const he = [1,0, ]
  var getDecimalValue = function(head) {
     let temp = head, len = 0, sum =  0
     while(temp){
