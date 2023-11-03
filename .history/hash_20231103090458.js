@@ -243,7 +243,6 @@ else {
  */
 MyHashSet.prototype.contains = function (key) {
   for(let i = 0; i< this.arr.length; i++){
-    if(this.arr[i] === key) return true
+    if(this.arr[i])
   }
-  return false
 };

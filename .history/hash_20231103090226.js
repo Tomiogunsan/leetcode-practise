@@ -231,7 +231,6 @@ else {
         this.arr[j] = this.arr[j + 1]
       }
       this.arr.pop()
-      return 
     }
   }
 }
@@ -241,9 +240,4 @@ else {
  * @param {number} key
  * @return {boolean}
  */
-MyHashSet.prototype.contains = function (key) {
-  for(let i = 0; i< this.arr.length; i++){
-    if(this.arr[i] === key) return true
-  }
-  return false
-};
+MyHashSet.prototype.contains = function (key) {};

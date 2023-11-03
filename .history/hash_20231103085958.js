@@ -227,11 +227,7 @@ MyHashSet.prototype.remove = function (key) {
 else {
   for(let i = 1; i < this.arr.length - 1; i++){
     if(this.arr[i] === key){
-      for(let j = i; j , this.arr.length - 1; j++){
-        this.arr[j] = this.arr[j + 1]
-      }
-      this.arr.pop()
-      return 
+      for()
     }
   }
 }
@@ -241,9 +237,4 @@ else {
  * @param {number} key
  * @return {boolean}
  */
-MyHashSet.prototype.contains = function (key) {
-  for(let i = 0; i< this.arr.length; i++){
-    if(this.arr[i] === key) return true
-  }
-  return false
-};
+MyHashSet.prototype.contains = function (key) {};
