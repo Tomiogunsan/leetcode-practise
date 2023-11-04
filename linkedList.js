@@ -401,5 +401,12 @@ var removeElements = function(head, val) {
       head = head.next;
     }
   }
+  let temp = head;
+  while (temp && temp.next) {
+    if (temp.next.val === val) {
+      temp.next = temp.next.next;
+    } else temp = temp.next;
+  }
+  return head;
 }
 
