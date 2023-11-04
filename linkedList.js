@@ -393,3 +393,8 @@ return node.next
 };
 
 console.log(getDecimalValue(he))
+
+var removeElements = function(head, val) {
+  
+}
+
