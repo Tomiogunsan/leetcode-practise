@@ -395,6 +395,11 @@ return node.next
 console.log(getDecimalValue(he))
 
 var removeElements = function(head, val) {
-  
+  if (!head) return head;
+  while (head) {
+    if (head.val === val) {
+      head = head.next;
+    }
+  }
 }
 
