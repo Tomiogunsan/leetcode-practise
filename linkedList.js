@@ -394,11 +394,14 @@ return node.next
 
 console.log(getDecimalValue(he))
 
+// return head.val === val ? head.next : head
 var removeElements = function(head, val) {
   if (!head) return head;
   while (head) {
     if (head.val === val) {
       head = head.next;
+    }else{
+      break
     }
   }
   let temp = head;
@@ -410,3 +413,17 @@ var removeElements = function(head, val) {
   return head;
 }
 
+let str1 = ''
+let str2 = ''
+let arr = [1,2, 2]
+for(let i = 0; i < arr.length; i++){
+  str1 = `${str1}${arr[i]}`
+  console.log(str1)
+  str2 = `${arr[i]}${str2}`
+  console.log(str2)
+}
+
+const h = [1,2,2,1]
+var isPalindrome = function(head) {
+
+}
