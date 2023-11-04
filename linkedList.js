@@ -423,7 +423,17 @@ for(let i = 0; i < arr.length; i++){
   console.log(str2)
 }
 
+
 const h = [1,2,2,1]
 var isPalindrome = function(head) {
-
+let str1 = (str2 = "");
+let node = head;
+while (node !== null) {
+  str1 = `${str1}${node.val}`;
+  str2 = `${node.val}${str2}`;
+  node = node.next;
 }
+return str1 === str2;
+}
+
+console.log(isPalindrome(h));
