@@ -437,3 +437,17 @@ return str1 === str2;
 }
 
 console.log(isPalindrome(h));
+
+
+// insert greatest common divisor in a linked list
+
+
+var insertGreatestCommonDivisors = function(head) {
+
+}
+
+// find greatest common divisor
+function findGCD(a, b) {
+  if (!b) return a;
+  return findGCD(b, a % b);
+}

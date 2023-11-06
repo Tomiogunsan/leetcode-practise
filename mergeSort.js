@@ -238,3 +238,18 @@ const res = parseInt(r[0] + r[3]) + parseInt(r[1] + r[2])
 return res
 };
 console.log(minimumSum(ni));
+
+const nn = [10, 6];
+
+function nam(nn) {
+  let x;
+  for (let i = 0; i < nn.length; i++) {
+    console.log(i);
+    if (nn[i]/x !== 0) {
+      console.log(x);
+    }
+  }
+  return x;
+}
+
+console.log(nam(nn));
