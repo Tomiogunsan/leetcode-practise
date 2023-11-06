@@ -441,9 +441,18 @@ console.log(isPalindrome(h));
 
 // insert greatest common divisor in a linked list
 
+const hi = [18, 6, 10, 3];
 
 var insertGreatestCommonDivisors = function(head) {
-
+if (!head) return head;
+let curr = head;
+while (curr && curr.next) {
+  let val = findGCD(curr.val, curr.next.val);
+  let node = new ListNode(val, curr.next);
+  curr.next = node;
+  curr = curr.next.next;
+}
+return head;
 }
 
 // find greatest common divisor
