@@ -460,3 +460,19 @@ function findGCD(a, b) {
   if (!b) return a;
   return findGCD(b, a % b);
 }
+
+// Given a linked list, swap every two adjacent nodes and return its head. You must solve the problem without modifying the values in the list's nodes (i.e., only nodes themselves may be changed.)
+var swapPairs = function(head) {
+  const dummy = new ListNode(0, head);
+  let curr = dummy;
+  while (curr.next && curr.next.next) {
+    let first = curr.next;
+    let second = curr.next.next;
+    let third = curr.next.next.next;
+    curr.next = second;
+    second.next = first;
+    first.next = third;
+    curr = first;
+  }
+  return dummy.next;
+}
