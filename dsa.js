@@ -398,3 +398,13 @@ var removeElement = function (vue, val) {
 };
 
 console.log(removeElement(vue, val));
+
+const digits = [9];
+var plusOne = function (digits) {
+  const res = BigInt((digits.join(''))) + BigInt(1)
+  console.log(res)
+  // const r  = +res + 1
+  return res.toString().split('').map(Number)
+};
+
+console.log(plusOne(digits));
