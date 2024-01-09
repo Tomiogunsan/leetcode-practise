@@ -382,3 +382,19 @@ var removeDuplicates = function (nums) {
   }
   return index;
 };
+
+const vue = [0, 1, 2, 2, 3, 0, 4, 2];
+const val = 2
+var removeElement = function (vue, val) {
+  for(let i = 0; i < vue.length; i++){
+    if(vue[i] === val){
+      vue.splice(i, 1)
+      console.log(vue)
+      i--
+    }
+  }
+  console.log(vue)
+  return vue.length
+};
+
+console.log(removeElement(vue, val));
