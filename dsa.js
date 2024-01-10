@@ -363,15 +363,15 @@ function powerOfTwo(n) {
   while (n > 1) {
     if (n % 2 !== 0) {
       return false;
-    } 
-    n = n / 2; 
+    }
+    n = n / 2;
   }
-  return true
+  return true;
 }
 
 console.log(powerOfTwo(1));
 
-const nums =[1,1,2]
+const nums = [1, 1, 2];
 var removeDuplicates = function (nums) {
   let index = 1;
   for (i = 0; i < nums.length - 1; i++) {
@@ -384,47 +384,71 @@ var removeDuplicates = function (nums) {
 };
 
 const vue = [0, 1, 2, 2, 3, 0, 4, 2];
-const val = 2
+const val = 2;
 var removeElement = function (vue, val) {
-  for(let i = 0; i < vue.length; i++){
-    if(vue[i] === val){
-      vue.splice(i, 1)
-      console.log(vue)
-      i--
+  for (let i = 0; i < vue.length; i++) {
+    if (vue[i] === val) {
+      vue.splice(i, 1);
+      console.log(vue);
+      i--;
     }
   }
-  console.log(vue)
-  return vue.length
+  console.log(vue);
+  return vue.length;
 };
 
 console.log(removeElement(vue, val));
 
 const digits = [9];
 var plusOne = function (digits) {
-  const res = BigInt((digits.join(''))) + BigInt(1)
-  console.log(res)
+  const res = BigInt(digits.join("")) + BigInt(1);
+  console.log(res);
   // const r  = +res + 1
-  return res.toString().split('').map(Number)
+  return res.toString().split("").map(Number);
 };
 
 console.log(plusOne(digits));
 
 const pairs = [-6, 2, 5, -2, -7, -1, 3];
-const target = -2
+const target = -2;
 
 var countPairs = function (pairs, target) {
-  let count =0
-  for(i=0; i<pairs.length; i++){
-    
-    for(j=i + 1; j<pairs.length; j++){
+  let count = 0;
+  for (i = 0; i < pairs.length; i++) {
+    for (j = i + 1; j < pairs.length; j++) {
       console.log(pairs[i], pairs[j]);
-      if((pairs[i] + pairs[j]) < target){
-        console.log(pairs[i], pairs[j])
-        count++
+      if (pairs[i] + pairs[j] < target) {
+        console.log(pairs[i], pairs[j]);
+        count++;
       }
     }
   }
-  return count
+  return count;
 };
 
 console.log(countPairs(pairs, target));
+
+let array = [0, 0, 1];
+let uniqueArray = array.filter((value, index, self) => {
+  return self.indexOf(value) === index;
+});
+console.log(uniqueArray);
+
+const words = ["abc", "bcd", "aaaa", "cbc"];
+const x = "z";
+var findWordsContaining = function (words, x) {
+  const res = [];
+  for (let i = 0; i < words.length; i++) {
+    let word = words[i];
+    for (let j = 0; j < word.length; j++) {
+      if (word[j] === x) {
+        res.push(i);
+      }
+    }
+  }
+  const result = res.filter((val, index, arr) => {
+    return arr.indexOf(val) === index;
+  });
+  return result;
+};
+console.log(findWordsContaining(words, x));
