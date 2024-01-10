@@ -408,3 +408,23 @@ var plusOne = function (digits) {
 };
 
 console.log(plusOne(digits));
+
+const pairs = [-6, 2, 5, -2, -7, -1, 3];
+const target = -2
+
+var countPairs = function (pairs, target) {
+  let count =0
+  for(i=0; i<pairs.length; i++){
+    
+    for(j=i + 1; j<pairs.length; j++){
+      console.log(pairs[i], pairs[j]);
+      if((pairs[i] + pairs[j]) < target){
+        console.log(pairs[i], pairs[j])
+        count++
+      }
+    }
+  }
+  return count
+};
+
+console.log(countPairs(pairs, target));
