@@ -452,3 +452,26 @@ var findWordsContaining = function (words, x) {
   return result;
 };
 console.log(findWordsContaining(words, x));
+
+ const num = [1, 2, 3];
+var nextPermutation = function (num) {
+  for (let i = num.length - 1; i >= 0; i--) {
+    if (num[i] < num[i + 1]) {
+      for (let j = num.length - 1; j > i; j--) {
+        if (num[j] > num[i]) {
+          swap(num, i, j);
+          reverse(num, i + 1, num - 1);
+          return;
+        }
+      }
+    }
+  }
+  nums.reverse();
+};
+
+const swap = (num, i, j) => ([num[i], num[j]] = [num[j], num[i]]);
+const reverse = (num, start, end) => {
+  while (start < end) {
+    swap(num, start++, end--);
+  }
+};
