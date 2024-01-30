@@ -21,14 +21,14 @@ console.log(strStr(haystack, needle));
 
 const strs = ["flower", "flow", "flight"];
 var longestCommonPrefix = function (strs) {
-  let output = "";
+  let prefix = "";
   for (let i = 0; i < strs[0].length; i++) {
     console.log(strs[0][i]);
     if (strs.every((item) => item[i] === strs[0][i])) {
-      output += strs[0][i];
+      prefix += strs[0][i];
     }else break
   }
-  return output;
+  return prefix;
 };
 
 console.log(longestCommonPrefix(strs));
