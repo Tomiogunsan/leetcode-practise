@@ -21,3 +21,23 @@ var strStr = function (haystack, needle) {
 };
 
 console.log(strStr(haystack, needle));
+
+const strs = ["flower", "flow", "flight"];
+var longestCommonPrefix = function (strs) {
+    if (strs.length === 0) {
+      return "";
+    }
+    let prefix = strs[0];
+    console.log(prefix)
+    for(let word of strs){
+        console.log(word.indexOf(prefix) !== 0)
+        while(word.indexOf(prefix) !== 0){
+            prefix = prefix.slice(0,  -1);
+            console.log(prefix)
+            if (prefix === "") return "";
+        }
+    }
+    return prefix
+};
+
+console.log(longestCommonPrefix(strs));
