@@ -13,3 +13,11 @@ function result () {
 
 console.log(canSwapToSmaller(username));
 console.log(result())
+
+const haystack = "sadbutsad";
+const needle = "sad";
+var strStr = function (haystack, needle) {
+   return haystack.indexOf(needle);
+};
+
+console.log(strStr(haystack, needle));
