@@ -32,3 +32,24 @@ var longestCommonPrefix = function (strs) {
 };
 
 console.log(longestCommonPrefix(strs));
+
+const s = "(]";
+var isValid = function (s) {
+    let arr = [];
+    let obj = {
+      "(": ")",
+      "[": "]",
+      "{": "}",
+    };
+
+   for(let i =0; i<s.length; i++){
+       if(obj[s[i]]){
+        arr.push(s[i])
+       }else{
+        if(obj[arr.pop()] !== s[i]) return false
+       }
+   }
+};
+
+
+console.log(isValid(s))
