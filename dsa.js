@@ -33,7 +33,7 @@ var longestCommonPrefix = function (strs) {
 
 console.log(longestCommonPrefix(strs));
 
-const s = "(]";
+const s = "()";
 var isValid = function (s) {
     let arr = [];
     let obj = {
@@ -49,6 +49,7 @@ var isValid = function (s) {
         if(obj[arr.pop()] !== s[i]) return false
        }
    }
+   return arr.length === 0;
 };
 
 
