@@ -59,6 +59,7 @@ const string = "   fly me   to   the moon  ";
 var lengthOfLastWord = function (string) {
   const res = string.trim().split(" ").pop().length
   console.log(res)
+  return res
 };
 
 console.log(lengthOfLastWord(string))
