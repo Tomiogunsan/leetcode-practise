@@ -74,3 +74,25 @@ var addBinary = function (a, b) {
 };
 
 console.log(addBinary(a,b));
+
+const palin = " ";
+var isPalindrome = function (palin) {
+  console.log(palin.toLowerCase().replaceAll(/[^a-zA-Z0-9]/g, "").split("").join(""));
+  console.log(
+    palin
+      .toLowerCase()
+      .replaceAll(/[^a-zA-Z0-9]/g, "")
+      .split("")
+      .reverse()
+      .join("")
+  );
+  
+  return  palin
+      .toLowerCase()
+      .replaceAll(/[^a-zA-Z0-9]/g, "")
+      .split("")
+      .reverse()
+      .join("") === palin.toLowerCase().replaceAll(/[^a-zA-Z0-9]/g, "").split("").join("");
+};
+
+console.log(isPalindrome(palin))
