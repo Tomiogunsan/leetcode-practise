@@ -88,3 +88,24 @@ var isPalindrome = function (palin) {
 };
 
 console.log(isPalindrome(palin))
+
+
+// So we need to create a loop and:
+
+// Get the code for the first letter
+// Use this code as an index in the ASCII table to get the char
+// Add this char to our result string
+// Get the new columnNumber for the next character by removing the code that we've already accounted for and dviding by 26
+columnNumber = 701;
+var convertToTitle = function (columnNumber) {
+  let result = ''
+  while (columnNumber > 0) {
+    const mod = (columnNumber - 1) % 26
+    result = String.fromCharCode(mod + 65) + result
+     columnNumber = ((columnNumber - 1) - mod) / 26
+     console.log(columnNumber)
+  }
+  return result
+};
+
+console.log(convertToTitle(columnNumber))
