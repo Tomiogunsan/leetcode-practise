@@ -103,7 +103,7 @@ var convertToTitle = function (columnNumber) {
     const mod = (columnNumber - 1) % 26
     result = String.fromCharCode(mod + 65) + result
      columnNumber = ((columnNumber - 1) - mod) / 26
-     console.log(columnNumber)
+     
   }
   return result
 };
