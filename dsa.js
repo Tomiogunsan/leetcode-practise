@@ -109,3 +109,16 @@ var convertToTitle = function (columnNumber) {
 };
 
 console.log(convertToTitle(columnNumber))
+
+columnTitle = "AB";
+var titleToNumber = function (columnTitle) {
+  let result = 0
+  for (let i = 0; i < columnTitle.length; i++) {
+    result = (columnTitle.charCodeAt(i) - 64) * Math.pow(26, columnTitle.length - i - 1) + result
+    console.log(result)
+
+  }
+  return result
+};
+
+console.log(titleToNumber(columnTitle))
