@@ -68,7 +68,7 @@ const a = "1010";
 const b = "1011";
 
 var addBinary = function (a, b) {
-  console.log(BigInt("11" + "1"));
+  
  
    return (BigInt("0b" + a) + BigInt("0b" + b)).toString(2);
 };
