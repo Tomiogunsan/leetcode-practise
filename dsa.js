@@ -108,7 +108,7 @@ var convertToTitle = function (columnNumber) {
   return result
 };
 
-console.log(convertToTitle(columnNumber))
+
 
 // convert excel title to number
 columnTitle = "AB";
