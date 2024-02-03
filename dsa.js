@@ -119,7 +119,7 @@ var titleToNumber = function (columnTitle) {
       (columnTitle.charCodeAt(i) - 64) *
         Math.pow(26, columnTitle.length - i - 1) +
       result;
-    console.log(result)
+    
 
   }
   return result
