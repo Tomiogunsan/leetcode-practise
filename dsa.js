@@ -130,8 +130,11 @@ console.log(titleToNumber(columnTitle))
 const arr = [3, 5, 1];
 var canMakeArithmeticProgression = function (arr) {
   arr.sort((a, b) => a - b);
+  console.log(arr)
   let diff = arr[1] - arr[0];
+
   for (let i = 1; i < arr.length; i++) {
+     console.log(arr[i] - arr[i - 1]);
     if (arr[i] - arr[i - 1] !== diff) return false;
   }
   return true;
