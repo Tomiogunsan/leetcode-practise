@@ -136,3 +136,26 @@ var canMakeArithmeticProgression = function (arr) {
 };
 
 console.log(canMakeArithmeticProgression(arr));
+
+const ar = [1, 1, 2, 2, 3];
+const ab = 0;
+const ba = 0;
+const c = 1;
+var countGoodTriplets = function (ar, ab, ba, c) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      for (let k = j + 1; k < arr.length; k++) {
+        if (
+          Math.abs(arr[i] - arr[j]) <= a &&
+          Math.abs(arr[j] - arr[k]) <= b &&
+          Math.abs(arr[i] - arr[k]) <= c
+        )
+          count++;
+      }
+    }
+  }
+  return count;
+};
+
+console.log(countGoodTriplets(ar, ab, ba, c));
