@@ -129,3 +129,5 @@ console.log(titleToNumber(columnTitle))
 
 const arr = [3, 5, 1];
 var canMakeArithmeticProgression = function (arr) {};
+
+console.log(canMakeArithmeticProgression(arr))
