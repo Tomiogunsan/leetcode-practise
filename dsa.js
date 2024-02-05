@@ -26,7 +26,7 @@ var longestCommonPrefix = function (strs) {
     console.log(strs[0][i]);
     if (strs.every((item) => item[i] === strs[0][i])) {
       prefix += strs[0][i];
-    }else break
+    } else break;
   }
   return prefix;
 };
@@ -35,60 +35,61 @@ console.log(longestCommonPrefix(strs));
 
 const s = "()";
 var isValid = function (s) {
-    let arr = [];
-    let obj = {
-      "(": ")",
-      "[": "]",
-      "{": "}",
-    };
+  let arr = [];
+  let obj = {
+    "(": ")",
+    "[": "]",
+    "{": "}",
+  };
 
-   for(let i =0; i<s.length; i++){
-       if(obj[s[i]]){
-        arr.push(s[i])
-       }else{
-        if(obj[arr.pop()] !== s[i]) return false
-       }
-   }
-   return arr.length === 0;
+  for (let i = 0; i < s.length; i++) {
+    if (obj[s[i]]) {
+      arr.push(s[i]);
+    } else {
+      if (obj[arr.pop()] !== s[i]) return false;
+    }
+  }
+  return arr.length === 0;
 };
 
-
-console.log(isValid(s))
+console.log(isValid(s));
 
 const string = "   fly me   to   the moon  ";
 var lengthOfLastWord = function (string) {
-  const res = string.trim().split(" ").pop().length
+  const res = string.trim().split(" ").pop().length;
 
-  return res
+  return res;
 };
 
-console.log(lengthOfLastWord(string))
+console.log(lengthOfLastWord(string));
 
 const a = "1010";
 const b = "1011";
 
 var addBinary = function (a, b) {
-  
- 
-   return (BigInt("0b" + a) + BigInt("0b" + b)).toString(2);
+  return (BigInt("0b" + a) + BigInt("0b" + b)).toString(2);
 };
 
-console.log(addBinary(a,b));
+console.log(addBinary(a, b));
 
 const palin = " ";
 var isPalindrome = function (palin) {
-  
-  
-  return  palin
+  return (
+    palin
       .toLowerCase()
       .replaceAll(/[^a-zA-Z0-9]/g, "")
       .split("")
       .reverse()
-      .join("") === palin.toLowerCase().replaceAll(/[^a-zA-Z0-9]/g, "").split("").join("");
+      .join("") ===
+    palin
+      .toLowerCase()
+      .replaceAll(/[^a-zA-Z0-9]/g, "")
+      .split("")
+      .join("")
+  );
 };
 
-console.log(isPalindrome(palin))
-
+console.log(isPalindrome(palin));
 
 // So we need to create a loop and:
 
@@ -98,46 +99,40 @@ console.log(isPalindrome(palin))
 // Get the new columnNumber for the next character by removing the code that we've already accounted for and dviding by 26
 columnNumber = 701;
 var convertToTitle = function (columnNumber) {
-  let result = ''
+  let result = "";
   while (columnNumber > 0) {
-    const mod = (columnNumber - 1) % 26
-    result = String.fromCharCode(mod + 65) + result
-     columnNumber = ((columnNumber - 1) - mod) / 26
-     
+    const mod = (columnNumber - 1) % 26;
+    result = String.fromCharCode(mod + 65) + result;
+    columnNumber = (columnNumber - 1 - mod) / 26;
   }
-  return result
+  return result;
 };
-
-
 
 // convert excel title to number
 columnTitle = "AB";
 var titleToNumber = function (columnTitle) {
-  let result = 0
+  let result = 0;
   for (let i = 0; i < columnTitle.length; i++) {
     result =
       (columnTitle.charCodeAt(i) - 64) *
         Math.pow(26, columnTitle.length - i - 1) +
       result;
-    
-
   }
-  return result
+  return result;
 };
 
-console.log(titleToNumber(columnTitle))
+console.log(titleToNumber(columnTitle));
 
 const arr = [3, 5, 1];
 var canMakeArithmeticProgression = function (arr) {
   arr.sort((a, b) => a - b);
-  console.log(arr)
+
   let diff = arr[1] - arr[0];
 
   for (let i = 1; i < arr.length; i++) {
-     console.log(arr[i] - arr[i - 1]);
     if (arr[i] - arr[i - 1] !== diff) return false;
   }
   return true;
 };
 
-console.log(canMakeArithmeticProgression(arr))
+console.log(canMakeArithmeticProgression(arr));
