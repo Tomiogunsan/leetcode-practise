@@ -158,4 +158,4 @@ var countGoodTriplets = function (ar, ab, ba, c) {
   return count;
 };
 
-console.log(countGoodTriplets(ar, ab, ba, c));
+
