@@ -135,7 +135,7 @@ var canMakeArithmeticProgression = function (arr) {
   return true;
 };
 
-console.log(canMakeArithmeticProgression(arr));
+
 
 const ar = [1, 1, 2, 2, 3];
 const ab = 0;
