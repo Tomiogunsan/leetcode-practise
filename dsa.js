@@ -175,3 +175,22 @@ var twoSum = function (nums, target) {
 };
 
 console.log(twoSum(nums, target));
+
+const num = [3, 2, 2, 3]
+const val = 3;
+var removeElement = function (num, val) {
+  let index = 0;
+
+  for (let i = 0; i < nums.length; i++) {
+    if (num[i] != val) {
+      num[index] = num[i];
+      index++;
+    }
+  }
+
+  return index;
+  }
+
+;
+
+console.log(removeElement(num, val));
