@@ -11,3 +11,19 @@ const fibo = () => {
 }
 
 console.log(fibo())
+
+
+const my_array = [7, 12, 9, 4, 11];
+
+const findTheLowestValue = () => {
+    let minVal = my_array[0];
+    for(i = 0; i < my_array.length; i++){
+        if(my_array[i] < minVal){
+            minVal = my_array[i];
+        }
+       
+    }
+     return minVal;
+}
+
+console.log(findTheLowestValue())
