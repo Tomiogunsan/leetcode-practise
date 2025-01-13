@@ -176,7 +176,7 @@ var twoSum = function (nums, target) {
 
 console.log(twoSum(nums, target));
 
-const num = [3, 2, 2, 3]
+const num = [3, 2, 2, 3];
 const val = 3;
 var removeElement = function (num, val) {
   let index = 0;
@@ -189,8 +189,19 @@ var removeElement = function (num, val) {
   }
 
   return index;
-  }
-
-;
+};
 
 console.log(removeElement(num, val));
+
+const str1 = "listen";
+const str2 = "silent";
+function anagram(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  console.log(str1.split("").sort().join(" "));
+  console.log(str2.split("").sort().join(""));
+   return str1.split("").sort().join("") === str2.split("").sort().join("");
+}
+
+console.log(anagram(str1, str2));
