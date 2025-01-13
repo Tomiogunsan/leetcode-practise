@@ -34,13 +34,18 @@ let myArray = [64, 34, 25, 12, 22, 11, 90];
 // bubble sort
 const findTheLargestValue = () => {
     for( i = 0; i < myArray.length; i++){
+          let swapped = false;
         for(j = 0; j < myArray.length - 1; j++){
             if(myArray[j] > myArray[j + 1]){
                 let temp = myArray[j];
                 myArray[j] = myArray[j + 1];
                 myArray[j + 1] = temp;
+                swapped = true;
             }
         }
+        if (!swapped) {
+        break;
+    }
     }
     return myArray
 }
