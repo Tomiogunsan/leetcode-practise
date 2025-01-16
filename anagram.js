@@ -12,3 +12,18 @@ function anagram(str1, str2) {
 console.log(anagram(str1, str2));
 
 
+const patterns = ["a", "abc", "bc", "d"]
+ const word = "abc";
+
+ const noOfSubString = () => {
+let count = 0
+for( let i = 0; i < patterns.length; i++){
+ 
+  if(word.includes(patterns[i])){
+    count++
+  }
+}
+return count
+ }
+
+ console.log(noOfSubString())
