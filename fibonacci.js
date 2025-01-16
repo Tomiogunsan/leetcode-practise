@@ -73,7 +73,18 @@ const findLowest = () => {
 for( i = 1; i< myArray.length; i++){
   let currentValue = myArray[i]
   let inserIndex = i 
+  for(j = i - 1; j>=0;  j--){
+    if(myArray[j] > currentValue){
+      myArray[j+1] = myArray[j]
+      inserIndex = j
+    }else{
+      break
+    }
+  
+  }
+   myArray[inserIndex] = currentValue;
 }
+ return myArray
 }
 
 console.log(findLowest())
