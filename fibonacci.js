@@ -68,3 +68,12 @@ const findTheLowest = () => {
 };
 
 console.log(findTheLowest());
+
+const findLowest = () => {
+for( i = 1; i< myArray.length; i++){
+  let currentValue = myArray[i]
+  let inserIndex = i 
+}
+}
+
+console.log(findLowest())
