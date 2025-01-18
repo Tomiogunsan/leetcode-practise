@@ -27,4 +27,3 @@ return count
  }
 
  console.log(noOfSubString())
- console.log(noOfSubString())
